@@ -4,14 +4,6 @@ body{
     font-family: URW Chancery L, cursive;
    padding: 5px 70px;
    border-radius: 15px;}
-.lineaExterior{
-   background-color:  #b1abf150;
-   border:2px solid rgb(12, 10, 0);
-border-radius: 15px;}
-.lineaExterior2{
-   background-color:  rgba(94, 90, 134, 0.314);
-   border:2px solid rgb(12, 10, 0);
-border-radius: 15px;}
 
 div footer {
    padding: 5px;
