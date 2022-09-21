@@ -8,22 +8,22 @@ body{
 
  
 /*logos*/
-contenedor1{
+.colorfondo{
+   background-color: rgba(0, 0, 255, 0.514);
+border-radius: 15px;
+padding: 5px;}
    
-   max-width: 100%;
-   padding: 0px 20px;}
-
-.iconosa .social img{width: 30px;}
+ 
 
 
-.redaccion{padding: 10px;
-margin: 10px;}
+.presentacion{font-family: URW Chancery L, cursive;}
+
    
 /* CASILLA DE EMAIL*/         
 
 .Email form{
   
-   background-color:red;
+
    padding: 10px;
    margin: 20px;}
 
@@ -47,7 +47,21 @@ margin: 10px;}
    border-radius: 15px;
    max-width: 100%; 
    word-wrap: break-word;
-   overflow: auto;}
+   overflow: auto;
+   padding: 10px;
+   margin: 10px}
+
+.progress{ margin: 5px;}
+
+   .cajafooter {
+    background-color:   #716fe969 ;
+      border: 2px solid  #d2b4de ;
+      border-radius: 15px;}
+
+     .divsection a{font-size: 100%;}
+     .divcopyright a{font-size: 100%;}
+     /* .divsection {background-color: blue; display: inline-flex; } */
+    /* .divcopyright {background-color: red;display: inline-flex;   } */
 
   textarea{  /*AUTOSIZE DE TEXTAREA*/
    overflow:hidden, scroll;
