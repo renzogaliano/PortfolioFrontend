@@ -5,13 +5,10 @@ body{
    padding: 5px 70px;
    border-radius: 15px;}
 
-div footer {
-   padding: 5px;
-   margin:5px; 
-   border-radius: 15px;}
+
  
 /*logos*/
-.contenedor1{
+contenedor1{
    
    max-width: 100%;
    padding: 0px 20px;}
@@ -19,11 +16,16 @@ div footer {
 .iconosa .social img{width: 30px;}
 
 
-
+.redaccion{padding: 10px;
+margin: 10px;}
    
 /* CASILLA DE EMAIL*/         
 
-
+.Email form{
+  
+   background-color:red;
+   padding: 10px;
+   margin: 20px;}
 
 
  #form {
@@ -39,9 +41,10 @@ div footer {
 #aside,footer, #section {
    border:1px solid rgb(109, 88, 202);}
 
-.acerca-de, .experiencia, .educacion, .skill, .proyectos{
+.redaccion{
    background-color:   #716fe969 ;
    border: 2px solid  #d2b4de ;
+   border-radius: 15px;
    max-width: 100%; 
    word-wrap: break-word;
    overflow: auto;}
