@@ -41,7 +41,7 @@ padding: 5px;}
 #aside,footer, #section {
    border:1px solid rgb(109, 88, 202);}
 
-.redaccion{
+.redaccion, .nuevo {
    background-color:   #716fe969 ;
    border: 2px solid  #d2b4de ;
    border-radius: 15px;
@@ -50,6 +50,8 @@ padding: 5px;}
    overflow: auto;
    padding: 10px;
    margin: 10px}
+
+.redaccion button{color:rgb(76,0,255)}
 
 .progress{ margin: 5px;}
 
@@ -74,5 +76,7 @@ padding: 5px;}
    border-radius:10px;
    border:2px solid #556677;
  }
+
+
 
 
