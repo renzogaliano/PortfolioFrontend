@@ -281,7 +281,7 @@
                 </div>
                
                <div class="mb-3">
-                 <input type="text" class="form-control"  id="detalles" /id="exampleFormControlTextarea1"/ rows="3" placeholder="DETALLES" /*oninput="salida_detalle(this.value)"*/ ></input>
+                 <textarea type="text" class="form-control"  id="detalles" /id="exampleFormControlTextarea1"/ rows="3" placeholder="DETALLES" /*oninput="salida_detalle(this.value)"*/ ></textarea>
                  <button onclick="foo()" /*onclick="bola()"*/ class="btn btn-outline-secondary" type="button" id="button-addon2">Botón</button>
                  
                 </div>
@@ -367,66 +367,90 @@
 
 </body>
 <script>
-   //-------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------
    
    
    
-   //copia para probar
+   //variables creadas para darle identidad a cada articulo creado
          var i = 0;
          var x = 0;
          var z = 0;
-        
+        // incremento diferencia (usando numeros de distinta magnitud como id)
       function foo(){
       i = i + 1;
       x = x + 100 ;
       z = z + 1000 ;      
        
+      //genero el contenedor(div), el titulo(h1), el (p) , un textarea y un boton. Se le asignan sus atributos
         var newDiv = document.createElement("div");
+        newDiv.setAttribute("class","container nuevo");
         var newh1 = document.createElement("h2");
         var newp = document.createElement("p");
+        newp.setAttribute("id",i);
         var newButton =document.createElement("button");
-        var newTextarea =document.createElement("textarea");
-       
-        //agrego las clases asi esteticamente se empareja
-        newDiv.setAttribute("class","container nuevo");
         newButton.setAttribute("class","fa fa-pencil");
         newButton.setAttribute("id", z)
-        newp.setAttribute("id",i);
+        var newTextarea =document.createElement("textarea");
         newTextarea.setAttribute("id",x);
         newTextarea.setAttribute("style","display:none");
+        
+        //seleccion y obtengo los valores correspondientes a id:detalles (donde escribo) y id:titulo (titulo que escribo)
         var detalles = document.getElementById("detalles").value;
         var titulo = document.getElementById("titulo").value; 
+        
+        //inserto el boton, h1, p y textarea dentro del div
         newDiv.appendChild(newButton);
         newDiv.appendChild(newh1);
         newDiv.appendChild(newp);
         newDiv.appendChild(newTextarea);
         
+        //creo un nodo de texto con la info dentro de titulo, y lo inserto dentro de h1
          var newTitle = document.createTextNode(titulo) 
          newh1.appendChild(newTitle); 
+         
+         
+         //creo un nodo de texto con la info dentro de detalles, y lo inserto dentro de p
          var newContent = document.createTextNode(detalles);
          newp.appendChild(newContent);
+       
+        //selecciono al elemento Edproyectos (id del div contenedor) e inserto todo debajo de dicho div
          var currentDiv = document.getElementById("Edproyectos"); 
-        document.body.insertBefore(newDiv, currentDiv);
+         document.body.insertBefore(newDiv, currentDiv);
+         
+         
+
+         //tomo lo que esta escrito en detalle y lo copio en textarea de edicion (que aparezca lo que inserte previamente)
+         document.getElementById(x).innerHTML = document.getElementById("detalles").value;
+
+         /*let a = document.getElementById(i);
+         let texto_sin_salto = document.getElementById("detalles").value;
+         let texto_con_salto = texto_sin_salto.replaceAll('\n', '<br/>');
+         a.innerHTML=texto_con_salto*/
+         //resumen de lo anterior, tomo el texto de detalles y le saco los espacio para ponerlo en p:
+         document.getElementById(i).innerHTML=document.getElementById("detalles").value.replaceAll('\n', '<br/>');
 
        
-   
+         //evento click sobre boton activa funcion que reconoce id del boton activado y en funcion de este determina 
+         // cuales de los <p> y textarea debe hacer visible u ocultar
         document.getElementById(z).onclick= function() {
-        
+        //uso el id del boton como punto de referencia y la division me devuelve los id de p y de textarea necesario (encontre otra forma)
          
+        
+        
         let parrafo= this.id/1000;
-        let textoare =this.id/10;
-               let txtModif = document.getElementById(parrafo);
-               let textArea = document.getElementById(textoare);
-           
-               if (textArea.style.display =="none") {
+         let textoare =this.id/10;
+         let txtModif = document.getElementById(parrafo);
+         let textArea = document.getElementById(textoare);
+           if (textArea.style.display =="none") {
                   txtModif.style.display = "none";
                   textArea.style.display="";}
-               else {
-                  
-                  var text =  textArea.value.replaceAll('\n', '<br/>');
+            else {var text =  textArea.value.replaceAll('\n', '<br/>');//tranforma los saltos en <br>
                   txtModif.innerHTML = text;
                   txtModif.style.display = "";
-                 textArea.style.display="none";}}}
+                  textArea.style.display="none";}}
+
+                   
+            }
 
 
    //newButton.setAttribute("onclick","function()") 
@@ -440,8 +464,7 @@
         //si quisiera agregarle texto al boton
         //newButton.innerText=("texto del boton");
    
-   
-   //---------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------
 
    //boton que alterna entre editar y guardar.
 
@@ -459,19 +482,18 @@
          var text =  textArea.value.replaceAll('\n', '<br/>');
          txtModif.innerHTML = text;
          txtModif.style.display = "";
-         textArea.style.display="none";
+         textArea.style.display="none";}}
 
-      }}
+//-----------------------------------------------------------------------------------------------------------------------------------------
 
   function ocultarEmail(){
    if(document.getElementById("formularioEmail").style.display ==""){
       document.getElementById("formularioEmail").style.display ="none"
    }
-   else{document.getElementById("formularioEmail").style.display =""}
+   else{document.getElementById("formularioEmail").style.display =""}}
    
-  }
-   
-   
+   //--------------------------------------------------------------------------------------------------------------------------
+
    //    function editar_guardar(){
    //    if (idtextarea.style.display =="none") {editar();}
    //    else {guardar();}}
