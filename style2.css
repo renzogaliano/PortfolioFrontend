@@ -5,41 +5,30 @@ body{
    padding: 5px 70px;
    border-radius: 15px;}
 
-
- 
 /*logos*/
 .colorfondo{
    background-color: rgba(0, 0, 255, 0.514);
-border-radius: 15px;
-padding: 5px;}
+   border-radius: 15px;
+   padding: 5px;}
    
- 
-
-
 .presentacion{font-family: URW Chancery L, cursive;}
 
    
-/* CASILLA DE EMAIL*/         
-
 .Email form{
-  
-
    padding: 10px;
    margin: 20px;}
-
 
  #form {
    background-color:blue;
    text-align: center;
    width: 100%;
    padding-top: 5px;
-   border-radius: 15px;
-}
+   border-radius: 15px;}
       
 .fa-pencil {float: right;}
 
 #aside,footer, #section {
-   border:1px solid rgb(109, 88, 202);}
+   border:2px solid #556677}
 
 .redaccion, .nuevo {
    background-color:   #716fe969 ;
@@ -51,21 +40,32 @@ padding: 5px;}
    padding: 10px;
    margin: 10px}
 
-.redaccion button{color:rgb(76,0,255)}
+.boton_foo{margin: 5px;}
+
+#botonera{color:rgb(76,0,255)}
+
+#titulo, #inputText{
+   border-radius: 15px;}
+
+#inputText{
+  height: 70px;}
+
+
+
 
 .progress{ margin: 5px;}
 
-   .cajafooter {
+.cajafooter {
     background-color:   #716fe969 ;
       border: 2px solid  #d2b4de ;
       border-radius: 15px;}
 
-     .divsection a{font-size: 100%;}
-     .divcopyright a{font-size: 100%;}
+.divsection a{font-size: 100%;}
+.divcopyright a{font-size: 100%;}
      /* .divsection {background-color: blue; display: inline-flex; } */
     /* .divcopyright {background-color: red;display: inline-flex;   } */
 
-  textarea{  /*AUTOSIZE DE TEXTAREA*/
+textarea{  /*AUTOSIZE DE TEXTAREA*/
    overflow:hidden, scroll;
    padding:15px;
    width:100%;
@@ -74,9 +74,10 @@ padding: 5px;}
    margin:20px auto;
    display:block;
    border-radius:10px;
-   border:2px solid #556677;
+   
  }
 
+ .redaccion textarea, #titulo {border:2px solid #55667775;
+border-radius: 15px;}
 
-
-
+ 
