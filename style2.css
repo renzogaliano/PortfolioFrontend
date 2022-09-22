@@ -1,15 +1,18 @@
+
+
 body{
     background-color:  #cecbf350; 
     border:2px solid rgb(12, 10, 0);
     font-family: URW Chancery L, cursive;
-   padding: 5px 30px;
+   padding: 5px 5px;
    border-radius: 15px;}
 
 /*logos*/
 .colorfondo{
    background-color: rgba(0, 0, 255, 0.514);
    border-radius: 15px;
-   padding: 5px;}
+   padding-bottom: 10px;
+padding-top: 10px;}
    
 .presentacion{font-family: URW Chancery L, cursive;}
 
@@ -42,14 +45,13 @@ body{
 
 .boton_foo{margin: 5px;}
 
-#botonera{color:rgb(76,0,255)}
+#botonera, .nuevo button{color:rgb(76,0,255)}
 
 #titulo, #inputText{
    border-radius: 15px;}
 
 #inputText{
   height: 70px;}
-
 
 
 
@@ -77,7 +79,7 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
    
  }
 
- .redaccion textarea, #titulo {border:2px solid #55667775;
+ .redaccion textarea, #titulo, .nuevo textarea {border:2px solid #55667775;
 border-radius: 15px;}
 
  
