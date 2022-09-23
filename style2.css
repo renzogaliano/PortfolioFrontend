@@ -28,7 +28,7 @@ opacity: 1;}
 .editFotoPerfil input {
    display: none;}
 
-.imagenPerfil{object-fit: fill;}
+
 
    
 .Email form{
@@ -56,16 +56,19 @@ opacity: 1;}
 
 .boton_foo{margin: 5px;}
 
-.botonera, .nuevo button{
+.botonera, .nuevo .botonera{
    color:rgb(76, 0, 255);
 background-color: #716fe969 ;
 opacity: 0.7;
-border-radius: 50%;}
+border-radius: 50%;
+display: none;}
 
 .basurero, .nuevo .basurero{color:rgb(248, 6, 6);
    background-color: #716fe969 ;
    opacity: 0.7;
-   border-radius: 50%;}
+   border-radius: 50%;
+   display: none;
+   }
 
 
 #titulo, #inputText{
