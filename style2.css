@@ -97,6 +97,6 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
 
  .redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion {border:2px solid #55667775;
 border-radius: 15px;
-resize: none; }
+resize: none;  }
 
  
