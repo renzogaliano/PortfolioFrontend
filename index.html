@@ -105,7 +105,7 @@
                <textarea type="text" class="form-control" id="idtextarea2" style="display:none;"> </textarea>
          </div>
 
-         <div class="educacion container redaccion eliminar" id="borrar_educacion">
+         <div class="educacion container redaccion eliminar" >
             <h2 style=" display:inline">Educación</h2>
             
             <button onclick="editar_guardar('texto_a_modificar3','idtextarea3')" class="bi bi-pencil botonera"  ></button>
@@ -186,7 +186,7 @@
             <!-- Copyright -->
          </footer>
          
-        <input type="button" onclick="habilitar_edicion()" value="borrar">
+        
 
 </body >
 <script>
@@ -196,7 +196,7 @@
 function habilitar_edicion(){
    var x = document.getElementsByClassName("botonera");
    var z = document.getElementsByClassName("basurero");
-   var t = document.getElementById("bodyMail");
+   
    
   //PROBLEMA TENGO QUE DAR DOBLE CLIK PARA HABILITAR
    if( x[0].style.display == "none"){
