@@ -15,12 +15,12 @@ body{
 padding-top: 10px;}
    
 .presentacion{font-family: URW Chancery L, cursive;
-font-size:100%;}
+}
 
    
 .Email form{
-   padding: 10px;
-   margin: 20px;}
+   padding: 1px;
+   margin: 5px;}
 
  #form {
    background-color:blue;
