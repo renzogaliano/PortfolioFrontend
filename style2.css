@@ -62,7 +62,7 @@ background-color: #716fe969 ;
 opacity: 0.7;
 border-radius: 50%;}
 
-.basurero{color:rgb(248, 6, 6);
+.basurero, .nuevo .basurero{color:rgb(248, 6, 6);
    background-color: #716fe969 ;
    opacity: 0.7;
    border-radius: 50%;}

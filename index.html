@@ -199,12 +199,15 @@
          var id_newh1 = 0;
          var id_newTextarea = 0;
          var id_newButton = 0;
+         var id_newBorrar = 0;
         // incremento diferencia (usando numeros de distinta magnitud como id)
       function agregarProyecto(){
         
          id_newh1 = id_newh1 + 1;
          id_newTextarea = id_newTextarea + 100 ;
-         id_newButton = id_newButton + 1000 ;      
+         id_newButton = id_newButton + 1000 ;  
+         id_newBorrar = id_newBorrar + 100000 ;    
+         
        
       //genero el contenedor(div), el titulo(h1), el (p) , un textarea y un boton. Se le asignan sus atributos
         var newDiv = document.createElement("div");
@@ -219,12 +222,16 @@
         newTextarea.setAttribute("id",id_newTextarea);
         newTextarea.setAttribute("style","display:none");
         newTextarea.setAttribute("class","form-control"); 
+        var newBorrar = document.createElement("button");
+        newBorrar.setAttribute("class","bi bi-trash rounded float-end basurero");
+        newBorrar.setAttribute("id", id_newBorrar)
         
         //seleccion y obtengo los valores correspondientes a id:inputText (donde escribo) y id:titulo (titulo que escribo)
         var inputText = document.getElementById("inputText").value;
         var titulo = document.getElementById("titulo").value; 
         
         //inserto el boton, h1, p y textarea dentro del div
+        newDiv.appendChild(newBorrar);
         newDiv.appendChild(newButton);
         newDiv.appendChild(newh1);
         newDiv.appendChild(newp);
@@ -233,7 +240,6 @@
         //creo un nodo de texto con la info dentro de titulo, y lo inserto dentro de h1
          var newTitle = document.createTextNode(titulo) 
          newh1.appendChild(newTitle); 
-         
          
          //creo un nodo de texto con la info dentro de inputText, y lo inserto dentro de p
          var newContent = document.createTextNode(inputText);
@@ -244,7 +250,6 @@
          document.body.insertBefore(newDiv, currentDiv);
          
          
-
          //tomo lo que esta escrito en detalle y lo copio en textarea de edicion (que aparezca lo que inserte previamente)
          document.getElementById(id_newTextarea).innerHTML = document.getElementById("inputText").value;
 
@@ -270,7 +275,21 @@
             else {var text =  textArea.value.replaceAll('\n', '<br/>');//tranforma los saltos en <br>
                   txtModif.innerHTML = text;
                   txtModif.style.display = "";
-                  textArea.style.display="none";}}}
+                  textArea.style.display="none";}}
+               
+               
+         document.getElementById(id_newBorrar).onclick= function() { 
+
+            var Div_objetivo = document.getElementById(this.id)
+            Div_objetivo.parentNode.remove();}
+               
+               
+               
+               
+               }
+
+
+         
 
    
 //-----------------------------------------------------------------------------------------------------------------------------------------
