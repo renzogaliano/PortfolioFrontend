@@ -3,7 +3,7 @@
 body{
     background-color:  #cecbf350; 
     border:2px solid rgb(12, 10, 0);
-    font-family: URW Chancery L, cursive;
+    
    padding: 5px 5px;
    border-radius: 15px;}
 
@@ -14,7 +14,8 @@ body{
    padding-bottom: 10px;
 padding-top: 10px;}
    
-.presentacion{font-family: URW Chancery L, cursive;}
+.presentacion{font-family: URW Chancery L, cursive;
+font-size:100%;}
 
    
 .Email form{
