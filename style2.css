@@ -91,10 +91,12 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
    margin:20px auto;
    display:block;
    border-radius:10px;
+   resize: none;
    
  }
 
- .redaccion textarea, #titulo, .nuevo textarea {border:2px solid #55667775;
-border-radius: 15px;}
+ .redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion {border:2px solid #55667775;
+border-radius: 15px;
+resize: none; }
 
  

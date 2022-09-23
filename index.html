@@ -66,9 +66,14 @@
              
             </div>
             
-               <div  class="col-sm-auto align-self-end "  >
-                  <h5 class="card-title presentacion">Renzo Galiano</h5>
-                  <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
+               <div  class="col-sm col align-self-end "  >
+                  <!--<h5 class="card-title presentacion">Renzo Galiano</h5>
+                  <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>-->
+                  
+                  <button onclick="editar_presentacion()" class="fa fa-pencil" id="botonera" style=""  ></button>
+                  <p  class="presentacion" id="texto_presentacion"> Renzo Galiano <br> Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
+                  <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
+
                </div>
             </div>
          </div>
@@ -271,12 +276,40 @@
          txtModif.style.display = "none";
          textArea.style.display="";
          }
-      else {
-         
-         var text =  textArea.value.replaceAll('\n', '<br/>');
+      else {var text =  textArea.value.replaceAll('\n', '<br/>');
          txtModif.innerHTML = text;
          txtModif.style.display = "";
          textArea.style.display="none";}}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+function editar_presentacion(){
+  
+   //document.getElementById("txtarea_presentacion").value=document.getElementById("texto_presentacion").innerText;
+   
+   var txtModif = document.getElementById("texto_presentacion");
+   var textArea = document.getElementById("txtarea_presentacion");
+  
+   
+   if (textArea.style.display =="none") {
+         txtModif.style.display = "none";
+         textArea.style.display="";}
+   else {var text =  textArea.value.replaceAll('\n', '<br/>');
+         txtModif.innerHTML = text;
+         txtModif.style.display = "";
+         textArea.style.display="none";}
+         
+      }
+
+     
+         
+
+
+
+
+
+
+
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
