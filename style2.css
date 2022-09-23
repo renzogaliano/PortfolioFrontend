@@ -13,7 +13,7 @@ body{
    background-repeat: no-repeat;
    background-size: 200%;
       border-radius: 15px;
-   padding-bottom: 10px;
+   padding-bottom: 5px;
 padding-top: 10px;}
    
 .presentacion{font-family: URW Chancery L, cursive;
@@ -25,27 +25,27 @@ font-size: 30px;
 color: rgb(159, 158, 165);
 opacity: 1;}
 
-.form-group>input {
+.editFotoPerfil input {
    display: none;}
+
+.imagenPerfil{object-fit: fill;}
+
    
 .Email form{
    padding: 1px;
    margin: 5px;}
 
- #form {
-   background-color:blue;
-   text-align: center;
-   width: 100%;
-   padding-top: 5px;
-   border-radius: 15px;}
+ 
       
 .fa-pencil {float: right;}
 
-#aside,footer, #section {
-   border:2px solid #556677}
+.divPresentacion{
+   border-radius: 15px;
+   max-width: 100%; 
+   overflow: auto;}
 
-.redaccion, .nuevo {
-   background-color:   #716fe969 ;
+.redaccion, .nuevo, .cajafooter {
+   background: radial-gradient(#58b46780, #64faff7e);
    border: 2px solid  #d2b4de ;
    border-radius: 15px;
    max-width: 100%; 
@@ -72,10 +72,7 @@ border-radius: 50%;}
 
 .progress{ margin: 5px;}
 
-.cajafooter {
-    background-color:   #716fe969 ;
-      border: 2px solid  #d2b4de ;
-      border-radius: 15px;}
+
 
 .divsection a{font-size: 100%;}
 .divcopyright a{font-size: 100%;}
@@ -91,9 +88,9 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
    margin:20px auto;
    display:block;
    border-radius:10px;
-   resize: none;
-   
- }
+   resize: none;}
+
+
 
  .redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion {border:2px solid #55667775;
 border-radius: 15px;
