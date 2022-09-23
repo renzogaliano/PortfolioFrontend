@@ -42,7 +42,7 @@
                <input type="password" class="form-control"  placeholder="Ingrese su Contraseña" style="margin-bottom:4px">
             </div>
             <div style="display: flex; justify-content: center;">
-               <button type="submit" class="btn btn-primary" style= >ENVIAR  </button>
+               <button type="submit" class="btn btn-primary"  >ENVIAR  </button>
                <button type="button" onclick="habilitar_edicion()" class="btn btn-secondary" >Editar  </button>
             </div>
            </form>
@@ -57,8 +57,9 @@
             <div class="row" >
               <div class="col  " style= "max-width:200px;   " >
                <img src="./fotomia.jpg"  class="img-fluid rounded-circle imagenPerfil "  alt="fotografia de Renzo"  >
-               <div class="editFotoPerfil" >
-                   <label for="file-input"> <i class="fa fa-camera" aria-hidden="true"></i>
+              
+               <div class="editFotoPerfil" id="id_camera" >
+                   <label for="file-input" > <i class="fa fa-camera" aria-hidden="true" ></i>
                    </label>
                      <input id="file-input" type="file" >
                </div>
@@ -69,7 +70,7 @@
                   <!--<h5 class="card-title presentacion">Renzo Galiano</h5>
                   <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>-->
                   
-                  <button onclick="editar_presentacion()" class="bi bi-pencil botonera" id=""  ></button>
+                  <button onclick="editar_presentacion()" class="bi bi-pencil botonera" id="boton_presentacion"  ></button>
                   <p  class="presentacion" id="texto_presentacion"> Renzo Galiano <br> Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
                   <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
 
@@ -192,26 +193,34 @@
 <script>
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-
+id_camera
 function habilitar_edicion(){
-   var x = document.getElementsByClassName("botonera");
-   var z = document.getElementsByClassName("basurero");
+   var formularioEmail = document.getElementById("formularioEmail");
+   var boton_presentacion = document.getElementById("boton_presentacion");
+   var botonera = document.getElementsByClassName("botonera");
+   var basurero = document.getElementsByClassName("basurero");
+   var id_cameraa = document.getElementById("id_camera");
    
    
   //PROBLEMA TENGO QUE DAR DOBLE CLIK PARA HABILITAR
-   if( x[0].style.display == "none"){
-      for(let y of x){y.style.display="inline"}
-      for(let y of z){y.style.display="inline"}}
-   else{
-      for(let y of x){y.style.display="none"}
-      for(let y of z){y.style.display="none"}
+   if( boton_presentacion.style.display==""){
+      alert("funciona")
+      for(let variable of botonera){variable.style.display="inline"}
+      for(let variable2 of basurero){variable2.style.display="inline"}
+      id_cameraa.style.display = "inline";
+   }
+
+   else{alert(" no funciona")
+      for(let variable of botonera ){variable.style.display="none"}
+      for(let variable2 of basurero ){variable2.style.display="none"}
+      
    }
 
  
 }
 
-
-
+//formularioEmail.style.display == ""
+//id_camera.style.display == "none"
 
 
 
