@@ -56,8 +56,16 @@
          <div class="col columna1" >
             <div class="row" >
               <div class="col-sm columna1_a" style= "max-width:200px;  " >
-                <img src="./fotomia.jpg"  class="img-fluid rounded-circle "  alt="fotografia de Renzo"  >
+               <img src="./fotomia.jpg"  class="img-fluid rounded-circle "  alt="fotografia de Renzo"  >
+               <div class="editFotoPerfil form-group" >
+                   <label for="file-input">
+                     <i class="fa fa-camera" aria-hidden="true"></i>
+                   </label>
+                     <input id="file-input" type="file">
                </div>
+             
+            </div>
+            
                <div  class="col-sm-auto align-self-end "  >
                   <h5 class="card-title presentacion">Renzo Galiano</h5>
                   <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
@@ -73,7 +81,7 @@
        
          <div  class="acerca-de container redaccion"  >
           <button onclick="editar_guardar('texto_a_modificar1','idtextarea1')" class="fa fa-pencil" id="botonera" ></button>
-            <h2>Acerca de mi</h2>
+            <h2>Acerca de mi </h2>
             <div >
             <p id="texto_a_modificar1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>

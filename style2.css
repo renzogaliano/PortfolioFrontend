@@ -3,20 +3,30 @@
 body{
     background-color:  #cecbf350; 
     border:2px solid rgb(12, 10, 0);
-    
+    background: radial-gradient(#58b46780, #64faff7e);
    padding: 5px 5px;
    border-radius: 15px;}
 
 /*logos*/
 .colorfondo{
-   background-color: rgba(0, 0, 255, 0.514);
-   border-radius: 15px;
+   background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
+   background-repeat: no-repeat;
+   background-size: cover;
+      border-radius: 15px;
    padding-bottom: 10px;
 padding-top: 10px;}
    
 .presentacion{font-family: URW Chancery L, cursive;
 }
 
+.editFotoPerfil i{
+transform: translate(120px, -40px);
+font-size: 30px;
+color: rgb(159, 158, 165);
+opacity: 1;}
+
+.form-group>input {
+   display: none;}
    
 .Email form{
    padding: 1px;
@@ -46,7 +56,11 @@ padding-top: 10px;}
 
 .boton_foo{margin: 5px;}
 
-#botonera, .nuevo button{color:rgb(76,0,255)}
+#botonera, .nuevo button{
+   color:rgb(76, 0, 255);
+background-color: #716fe969 ;
+opacity: 0.7;
+border-radius: 50%;}
 
 #titulo, #inputText{
    border-radius: 15px;}
