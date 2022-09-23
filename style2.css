@@ -7,7 +7,7 @@ body{
    padding: 5px 5px;
    border-radius: 15px;}
 
-/*logos*/
+
 .colorfondo{
    background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
    background-repeat: no-repeat;
@@ -56,11 +56,17 @@ opacity: 1;}
 
 .boton_foo{margin: 5px;}
 
-#botonera, .nuevo button{
+.botonera, .nuevo button{
    color:rgb(76, 0, 255);
 background-color: #716fe969 ;
 opacity: 0.7;
 border-radius: 50%;}
+
+.basurero{color:rgb(248, 6, 6);
+   background-color: #716fe969 ;
+   opacity: 0.7;
+   border-radius: 50%;}
+
 
 #titulo, #inputText{
    border-radius: 15px;}

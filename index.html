@@ -9,8 +9,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-   <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
+   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
    <title>Frontend</title>
 </head>
 
@@ -68,7 +68,7 @@
                   <!--<h5 class="card-title presentacion">Renzo Galiano</h5>
                   <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>-->
                   
-                  <button onclick="editar_presentacion()" class="fa fa-pencil" id="botonera"  ></button>
+                  <button onclick="editar_presentacion()" class="bi bi-pencil botonera" id=""  ></button>
                   <p  class="presentacion" id="texto_presentacion"> Renzo Galiano <br> Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
                   <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
 
@@ -82,9 +82,11 @@
 </div>
       
        
-         <div  class="acerca-de container redaccion"  >
-          <button onclick="editar_guardar('texto_a_modificar1','idtextarea1')" class="fa fa-pencil" id="botonera" ></button>
-            <h2>Acerca de mi </h2>
+         <div  class="acerca-de container redaccion"   >
+             <h2 style=" display:inline">Acerca de mi </h2>
+            
+            <button onclick="editar_guardar('texto_a_modificar1','idtextarea1')" class="bi bi-pencil botonera"  ></button>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
             <div >
             <p id="texto_a_modificar1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
@@ -92,8 +94,10 @@
          </div>
 
          <div class="experiencia container redaccion" > 
-           <button onclick="editar_guardar('texto_a_modificar2','idtextarea2')" class="fa fa-pencil" id="botonera" ></button>
-            <h2>Experiencia</h2>
+            <h2 style=" display:inline">Experiencia</h2>
+            
+            <button onclick="editar_guardar('texto_a_modificar2','idtextarea2')" class="bi bi-pencil botonera"  ></button>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_experiencia" ></button>
             <div id="texto_a_modificar2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
@@ -101,8 +105,10 @@
          </div>
 
          <div class="educacion container redaccion">
-           <button onclick="editar_guardar('texto_a_modificar3','idtextarea3')" class="fa fa-pencil" id="botonera" ></button>
-            <h2>Educación</h2>
+            <h2 style=" display:inline">Educación</h2>
+            
+            <button onclick="editar_guardar('texto_a_modificar3','idtextarea3')" class="bi bi-pencil botonera"  ></button>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <div id="texto_a_modificar3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
@@ -110,9 +116,10 @@
           </div>
 
          <div class="skill container redaccion" id="skill">
-           
-            <button onclick="editar_guardar('texto_a_modificar4','idtextarea4')" class="fa fa-pencil" id="botonera" ></button>
-            <h2>Skill</h2>
+            <h2 style=" display:inline">Skill</h2>
+            
+            <button onclick="editar_guardar('texto_a_modificar4','idtextarea4')" class="bi bi-pencil botonera" id="skill" ></button>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_skill" ></button>
             <div id="texto_a_modificar4">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
@@ -134,9 +141,9 @@
 
          <!-- <div class="proyectos container redaccion" id="proyectoss">
            
-            <button onclick="editar_guardar('texto_a_modificar5','idtextarea5')" class="fa fa-pencil"  ><span id="botonera"></span></button>
+            <button onclick="editar_guardar('texto_a_modificar5','idtextarea5')" class="bi bi-pencil botonera"  ><span id=""></span></button>
             
-            <h2>Proyectos</h2>
+            <h2 style=" display:inline">Proyectos</h2>
             <div id="texto_a_modificar5" >
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
@@ -145,7 +152,9 @@
          </div> -->
 
          <div class="container redaccion" id="Edproyectos">
-            <h2>Proyectos</h2>
+            <h2 style=" display:inline">Proyectos</h2>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_dproyectoss" ></button>
+            
             <div >
              <div class="mb-3">
                <input type="text" id="titulo" class="form-control" id="exampleFormControlInput1" placeholder="TITULO" >
@@ -177,18 +186,22 @@
          </footer>
   
 
-</body>
+</body >
 <script>
 //-----------------------------------------------------------------------------------------------------------------------------------------
+   function borrar(parametro){
+      var Div_objetivo = document.getElementById(parametro)
+      Div_objetivo.parentNode.remove();}
    
-   
-   
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+
    //variables creadas para darle identidad a cada articulo creado
          var id_newh1 = 0;
          var id_newTextarea = 0;
          var id_newButton = 0;
         // incremento diferencia (usando numeros de distinta magnitud como id)
       function agregarProyecto(){
+        
          id_newh1 = id_newh1 + 1;
          id_newTextarea = id_newTextarea + 100 ;
          id_newButton = id_newButton + 1000 ;      
@@ -200,7 +213,7 @@
         var newp = document.createElement("p");
         newp.setAttribute("id",id_newh1);
         var newButton =document.createElement("button");
-        newButton.setAttribute("class","fa fa-pencil");
+        newButton.setAttribute("class","bi bi-pencil botonera");
         newButton.setAttribute("id", id_newButton)
         var newTextarea =document.createElement("textarea");
         newTextarea.setAttribute("id",id_newTextarea);
@@ -247,8 +260,7 @@
          // cuales de los <p> y textarea debe hacer visible u ocultar
         document.getElementById(id_newButton).onclick= function() {
         //uso el id del boton como punto de referencia y la division me devuelve los id de p y de textarea necesario (encontre otra forma)
-         
-        let parrafo= this.id/1000;
+         let parrafo= this.id/1000;
          let textoare =this.id/10;
          let txtModif = document.getElementById(parrafo);
          let textArea = document.getElementById(textoare);
