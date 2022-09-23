@@ -245,8 +245,6 @@
         document.getElementById(id_newButton).onclick= function() {
         //uso el id del boton como punto de referencia y la division me devuelve los id de p y de textarea necesario (encontre otra forma)
          
-        
-        
         let parrafo= this.id/1000;
          let textoare =this.id/10;
          let txtModif = document.getElementById(parrafo);
@@ -257,22 +255,8 @@
             else {var text =  textArea.value.replaceAll('\n', '<br/>');//tranforma los saltos en <br>
                   txtModif.innerHTML = text;
                   txtModif.style.display = "";
-                  textArea.style.display="none";}}
+                  textArea.style.display="none";}}}
 
-                   
-            }
-
-
-   //newButton.setAttribute("onclick","function()") 
-        //newButton.onclick= function() {editar_guardar(i,x)};
-       // newButton.onclick= function() {editar_guardar(i,x)};
-
-        //newButton.setAttribute("onclick",function(){editar_guardar(i,x)});
-       
-       //document.getElementById(z).onclick=function(){editar_guardar(i,x)};
-
-        //si quisiera agregarle texto al boton
-        //newButton.innerText=("texto del boton");
    
 //-----------------------------------------------------------------------------------------------------------------------------------------
 

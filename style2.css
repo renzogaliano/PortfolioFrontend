@@ -11,7 +11,7 @@ body{
 .colorfondo{
    background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: 200%;
       border-radius: 15px;
    padding-bottom: 10px;
 padding-top: 10px;}
