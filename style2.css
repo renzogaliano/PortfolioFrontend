@@ -6,7 +6,8 @@ body{
     background: radial-gradient(#58b46780, #64faff7e);
    padding: 5px 5px;
    border-radius: 15px;}
-
+/*Si a box sizing le das border box eso asegura que todo quede contenido dentro de la caja contenedora del elemento*/
+   *{box-sizing: border-box;}
 
 .colorfondo{
    background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
