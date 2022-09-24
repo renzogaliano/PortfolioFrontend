@@ -43,7 +43,7 @@
             </div>
             <div style="display: flex; justify-content: center;">
                <button type="submit" class="btn btn-primary"  >ENVIAR  </button>
-               <button type="button" onclick="habilitar_edicion()" class="btn btn-secondary" >Editar  </button>
+               <button type="button" onclick="habilitar_edicion()" class="btn btn-secondary" value="off" id="onoff" >Editar  </button>
             </div>
            </form>
          </div>
@@ -195,25 +195,27 @@
 
 id_camera
 function habilitar_edicion(){
-   var formularioEmail = document.getElementById("formularioEmail");
-   var boton_presentacion = document.getElementById("boton_presentacion");
+   var onoff = document.getElementById("onoff");
    var botonera = document.getElementsByClassName("botonera");
    var basurero = document.getElementsByClassName("basurero");
    var id_cameraa = document.getElementById("id_camera");
-   
-   
+      
   //PROBLEMA TENGO QUE DAR DOBLE CLIK PARA HABILITAR
-   if( boton_presentacion.style.display==""){
-      alert("funciona")
-      for(let variable of botonera){variable.style.display="inline"}
-      for(let variable2 of basurero){variable2.style.display="inline"}
+   if( onoff.value=="off"){
+      
+      for(let variable of botonera){variable.style.display="inline"};
+      for(let variable2 of basurero){variable2.style.display="inline"};
       id_cameraa.style.display = "inline";
+      onoff.value="on";
+      ocultarEmail()
    }
 
-   else{alert(" no funciona")
-      for(let variable of botonera ){variable.style.display="none"}
-      for(let variable2 of basurero ){variable2.style.display="none"}
-      
+   else{
+      for(let variable of botonera ){variable.style.display="none"};
+      for(let variable2 of basurero ){variable2.style.display="none"};
+      id_cameraa.style.display = "inline";
+      onoff.value="off"
+      ocultarEmail()
    }
 
  
