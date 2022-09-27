@@ -57,6 +57,8 @@ opacity: 1;}
    padding: 10px;
    margin: 10px}
 
+   #Edproyectos{display: none;}
+
 .boton_foo{margin: 5px;}
 
 .botonera, .nuevo .botonera{
@@ -75,11 +77,10 @@ display: none;}
 
    
 
-#titulo, #inputText{
-   border-radius: 15px;}
+ #inputText{
+   border-radius: 15px;
+   height: 80px;}
 
-#inputText{
-  height: 70px;}
 
 
 

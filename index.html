@@ -189,17 +189,17 @@
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_dproyectoss" ></button>
             
             <div >
-             <div class="mb-3">
-               <input type="text" id="titulo" class="form-control" id="exampleFormControlInput1" placeholder="TITULO" >
+            <div class="mb-3">
+              <!-- <input type="text" id="titulo" class="form-control" id="exampleFormControlInput1" placeholder="TITULO" >-->
              </div>
              <div class="mb-3">
-               <textarea type="text" class="form-control"  id="inputText"   placeholder="DETALLES"  ></textarea>
+               <textarea type="text" class="form-control"  id="inputText"   placeholder="TITULO&#10;DETALLES&#10;" ></textarea>
                <button onclick="agregarProyecto()" class="btn btn-dark rounded float-end boton_foo" type="button"  >Agregar</button>
              </div>
             </div>
          </div> 
 
-
+ 
          <footer class=" container text-center text-white cajafooter" >
             <div class="  ">
              <section class="  mb divsection" >
@@ -230,6 +230,7 @@ function habilitar_edicion(){
    var botonera = document.getElementsByClassName("botonera");
    var basurero = document.getElementsByClassName("basurero");
    var id_cameraa = document.getElementById("id_camera");
+   var proyectos = document.getElementById("Edproyectos");
       
   //PROBLEMA TENGO QUE DAR DOBLE CLIK PARA HABILITAR
    if( onoff.value=="off"){
@@ -237,6 +238,7 @@ function habilitar_edicion(){
       for(let variable of botonera){variable.style.display="inline"};
       for(let variable2 of basurero){variable2.style.display="inline"};
       id_cameraa.style.display = "inline";
+      proyectos.style.display = "block";
       onoff.value="on";
       ocultarEmail()
    }
@@ -245,6 +247,7 @@ function habilitar_edicion(){
       for(let variable of botonera ){variable.style.display="none"};
       for(let variable2 of basurero ){variable2.style.display="none"};
       id_cameraa.style.display = "none";
+      proyectos.style.display = "none";
       onoff.value="off"
       ocultarEmail()
    }
@@ -267,26 +270,33 @@ function habilitar_edicion(){
    //variables creadas para darle identidad a cada articulo creado
          var id_newh1 = 0;
          var id_newTextarea = 0;
-         var id_newButton = 0;
+         //var id_newButton = 0;
          var id_newBorrar = 0;
         // incremento diferencia (usando numeros de distinta magnitud como id)
       function agregarProyecto(){
         
          id_newh1 = id_newh1 + 1;
          id_newTextarea = id_newTextarea + 100 ;
-         id_newButton = id_newButton + 1000 ;  
+         //id_newButton = id_newButton + 1000 ;  
          id_newBorrar = id_newBorrar + 100000 ;    
          
        
       //genero el contenedor(div), el titulo(h1), el (p) , un textarea y un boton. Se le asignan sus atributos
         var newDiv = document.createElement("div");
         newDiv.setAttribute("class","container nuevo");
-        var newh1 = document.createElement("h2");
+        //var newh1 = document.createElement("h2");
         var newp = document.createElement("p");
         newp.setAttribute("id",id_newh1);
-        var newButton =document.createElement("button");
-        newButton.setAttribute("class","bi bi-pencil botonera");
-        newButton.setAttribute("id", id_newButton)
+        //var newButton =document.createElement("button");
+        var newButton2 =document.createElement("button");
+
+        newButton2.setAttribute("class","bi bi-pencil botonera");
+        //newButton.setAttribute("id", id_newButton)
+        newButton2.setAttribute("data-bs-toggle", "modal")
+        newButton2.setAttribute("data-bs-target", "#exampleModal")
+        newButton2.setAttribute("onclick", "cambiarIp(this.nextElementSibling.id)")
+        newButton2.setAttribute("style", "display:inline")
+
         var newTextarea =document.createElement("textarea");
         newTextarea.setAttribute("id",id_newTextarea);
         newTextarea.setAttribute("style","display:none");
@@ -294,21 +304,22 @@ function habilitar_edicion(){
         var newBorrar = document.createElement("button");
         newBorrar.setAttribute("class","bi bi-trash rounded float-end basurero");
         newBorrar.setAttribute("id", id_newBorrar)
-        
+        newBorrar.setAttribute("style", "display:inline")
         //seleccion y obtengo los valores correspondientes a id:inputText (donde escribo) y id:titulo (titulo que escribo)
         var inputText = document.getElementById("inputText").value;
-        var titulo = document.getElementById("titulo").value; 
+        //var titulo = document.getElementById("titulo").value; 
         
         //inserto el boton, h1, p y textarea dentro del div
         newDiv.appendChild(newBorrar);
-        newDiv.appendChild(newButton);
-        newDiv.appendChild(newh1);
+        //newDiv.appendChild(newButton);
+        //newDiv.appendChild(newh1);
+        newDiv.appendChild(newButton2);
         newDiv.appendChild(newp);
         newDiv.appendChild(newTextarea);
         
-        //creo un nodo de texto con la info dentro de titulo, y lo inserto dentro de h1
+      /*  //creo un nodo de texto con la info dentro de titulo, y lo inserto dentro de h1
          var newTitle = document.createTextNode(titulo) 
-         newh1.appendChild(newTitle); 
+         newh1.appendChild(newTitle); */
          
          //creo un nodo de texto con la info dentro de inputText, y lo inserto dentro de p
          var newContent = document.createTextNode(inputText);
@@ -322,17 +333,20 @@ function habilitar_edicion(){
          //tomo lo que esta escrito en detalle y lo copio en textarea de edicion (que aparezca lo que inserte previamente)
          document.getElementById(id_newTextarea).innerHTML = document.getElementById("inputText").value;
 
-         /*let a = document.getElementById(i);
+         /* DESACTIVO EL TITULO
+         let a = document.getElementById(i);
          let texto_sin_salto = document.getElementById("inputText").value;
          let texto_con_salto = texto_sin_salto.replaceAll('\n', '<br/>');
-         a.innerHTML=texto_con_salto*/
+         a.innerHTML=texto_con_salto
          //resumen de lo anterior, tomo el texto de inputText y le saco los espacio para ponerlo en:
          document.getElementById(id_newh1).innerHTML=document.getElementById("inputText").value.replaceAll('\n', '<br/>');
 
        
          //evento click sobre boton activa funcion que reconoce id del boton activado y en funcion de este determina 
          // cuales de los <p> y textarea debe hacer visible u ocultar
-        document.getElementById(id_newButton).onclick= function() {
+        
+        
+         /*   document.getElementById(id_newButton).onclick= function() {
         //uso el id del boton como punto de referencia y la division me devuelve los id de p y de textarea necesario (encontre otra forma)
          let parrafo= this.id/1000;
          let textoare =this.id/10;
@@ -344,7 +358,7 @@ function habilitar_edicion(){
             else {var text =  textArea.value.replaceAll('\n', '<br/>');//tranforma los saltos en <br>
                   txtModif.innerHTML = text;
                   txtModif.style.display = "";
-                  textArea.style.display="none";}}
+                  textArea.style.display="none";}}*/
                
                
          document.getElementById(id_newBorrar).onclick= function() { 
@@ -387,7 +401,7 @@ function editar_presentacion(){
    
    var txtModif = document.getElementById("texto_presentacion");
    var textArea = document.getElementById("txtarea_presentacion");
-  
+   
    
    if (textArea.style.display =="none") {
          txtModif.style.display = "none";
@@ -396,6 +410,7 @@ function editar_presentacion(){
          txtModif.innerHTML = text;
          txtModif.style.display = "";
          textArea.style.display="none";}
+         
          
       }
 
