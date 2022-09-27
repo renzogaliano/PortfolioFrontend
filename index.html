@@ -15,6 +15,31 @@
 </head>
 
 <body  >
+
+<!--Modal para facilitar la edicion de los textos-->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Título del modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style=" padding:1px ">
+            <textarea type="text" style="width:100%;height:20vh;resize: none" id="escritura"> </textarea>
+          </div>
+          <div class="modal-footer" id="id_del_padre">
+            
+           <button type="button" class="btn btn-primary " data-bs-dismiss="modal" onclick="insertar(this.value)" id="ip_inicial" >Guardar cambios </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
  
 <div class="container colorfondo">
       
@@ -70,7 +95,8 @@
                   <!--<h5 class="card-title presentacion">Renzo Galiano</h5>
                   <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>-->
                   
-                  <button onclick="editar_presentacion()" class="bi bi-pencil botonera" id="boton_presentacion"  ></button>
+                  <!-- <button onclick="editar_presentacion()" class="bi bi-pencil botonera" id="boton_presentacion"  ></button> -->
+                  <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class=" bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>
                   <p  class="presentacion" id="texto_presentacion"> Renzo Galiano <br> Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
                   <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
 
@@ -84,47 +110,52 @@
 </div>
       
        
-         <div  class="acerca-de container redaccion eliminar"  >
+         <div  class="acerca-de container redaccion "  >
              <h2 style=" display:inline"  >Acerca de mi </h2>
             
-            <button onclick="editar_guardar('texto_a_modificar1','idtextarea1')" class="bi bi-pencil botonera"  ></button>
+            <!-- <button onclick="editar_guardar('texto_a_modificar1','idtextarea1')" class="bi bi-pencil botonera"  ></button> -->
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
-            <div >
+            <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class=" bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>
+            
+              
             <p id="texto_a_modificar1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
+            
             <textarea type="text"  class="form-control" id="idtextarea1" style="display:none;"> </textarea>
          </div>
 
-         <div class="experiencia container redaccion eliminar" > 
+         <div class="experiencia container redaccion " > 
             <h2 style=" display:inline">Experiencia</h2>
             
-            <button onclick="editar_guardar('texto_a_modificar2','idtextarea2')" class="bi bi-pencil botonera"  ></button>
+            <!-- <button onclick="editar_guardar('texto_a_modificar2','idtextarea2')" class="bi bi-pencil botonera"  ></button> -->
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_experiencia" ></button>
-            <div id="texto_a_modificar2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
+            
+               <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>
+            <p  id="texto_a_modificar2">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            
                <textarea type="text" class="form-control" id="idtextarea2" style="display:none;"> </textarea>
          </div>
 
-         <div class="educacion container redaccion eliminar" >
+         <div class="educacion container redaccion " >
             <h2 style=" display:inline">Educación</h2>
             
-            <button onclick="editar_guardar('texto_a_modificar3','idtextarea3')" class="bi bi-pencil botonera"  ></button>
+            <!-- <button onclick="editar_guardar('texto_a_modificar3','idtextarea3')" class="bi bi-pencil botonera"  ></button> -->
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
-            <div id="texto_a_modificar3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
+            
+               <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>
+            <p id="texto_a_modificar3">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            
                <textarea type="text" class="form-control" id="idtextarea3" style="display:none;"> </textarea>
           </div>
 
          <div class="skill container redaccion" id="skill">
             <h2 style=" display:inline">Skill</h2>
             
-            <button onclick="editar_guardar('texto_a_modificar4','idtextarea4')" class="bi bi-pencil botonera" id="skill" ></button>
+            <!-- <button onclick="editar_guardar('texto_a_modificar4','idtextarea4')" class="bi bi-pencil botonera" id="skill" ></button> -->
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_skill" ></button>
-            <div id="texto_a_modificar4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
+            
+               <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>
+            <p id="texto_a_modificar4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            
                <textarea type="text" class="form-control" id="idtextarea4" style="display:none;"> </textarea>
             
             <div class="progress ">
@@ -368,7 +399,19 @@ function editar_presentacion(){
          
       }
 
-     
+ //-----------------------------------------------------------------------------------------------------------
+ //recibe el value desde boton guardar del modal, y lo usa como ip para modificar el texto objetivo
+ function insertar(parametro){
+
+document.getElementById(parametro).innerText=document.getElementById("escritura").value;
+document.getElementById("escritura").value="";
+}
+
+//recibe el valor del ip del objetivo o un value (que es igual al ip objetivo), y lo inserta como value para el boton guardar del modal
+function cambiarIp(parametro){
+var newValue = parametro;
+document.getElementById("ip_inicial").setAttribute("value",newValue);
+}    
          
 
 
