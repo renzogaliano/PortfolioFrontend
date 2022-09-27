@@ -12,7 +12,7 @@ body{
 .colorfondo{
    background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
    background-repeat: no-repeat;
-   background-size: 200%;
+   background-size: 300vh;
       border-radius: 15px;
    padding-bottom: 5px;
 padding-top: 10px;
@@ -31,7 +31,7 @@ object-fit: fill;
    padding: 5px;
    border-radius: 15px;
    }
-   #escritura{}
+  
    #ip_inicial{ border-radius: 15px;}
    
 .presentacion{font-family: URW Chancery L, cursive;
