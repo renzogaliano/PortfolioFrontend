@@ -18,6 +18,21 @@ body{
 padding-top: 10px;
 object-fit: fill;
 }
+
+ 
+
+
+.modal-content, .modal-dialog{
+   background: radial-gradient(#58b46780, #64faff7e);
+   border: 1px solid  #d2b4de ;
+   max-width: 100%; 
+   word-wrap: break-word;
+   overflow: auto;
+   padding: 5px;
+   border-radius: 15px;
+   }
+   #escritura{}
+   #ip_inicial{ border-radius: 15px;}
    
 .presentacion{font-family: URW Chancery L, cursive;
 }
@@ -106,7 +121,7 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
 
 
 
- .redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion {border:2px solid #55667775;
+ .redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion, #escritura {border:2px solid #55667775;
 border-radius: 15px;
 resize: none;  }
 
