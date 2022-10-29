@@ -15,7 +15,7 @@
 </head>
 
 <body  >
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
 <!--Modal para facilitar la edicion de los textos-->
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -25,7 +25,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" style=" padding:1px ">
-            <textarea type="text" style="width:100%;height:15vh;resize: none" id="escritura"> </textarea>
+            <input class="titulo1 " type="text"  >
+            <input class="titulo2 " type="text"  >
+            <textarea type="text" style="width:100%;height:15vh;resize: none" class="escritura"> </textarea>
           </div>
           <div class="modal-footer" id="id_del_padre">
             
@@ -34,8 +36,32 @@
         </div>
       </div>
     </div>
-
- 
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+ <!--------------------------------------------------------------------------------------------------------------------------------------------> 
+<!--Modal para facilitar la edicion de los textos-->
+<div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style=" padding:0.5px ">
+        <div>Posicion/Cargo<input class="cargo " type="text" ></div>
+        <div>Empresa<input class="empresa " type="text" ></div>
+        <div>Fecha Inicio<input class="desde " type="text" ></div>
+        <div>Fecha Fin<input class="hasta " type="text" ></div>
+          
+          <textarea type="text" style="width:100%;height:15vh;resize: none" class="escritura"> </textarea>
+        </div>
+        <div class="modal-footer" id="id_del_padre">
+          
+         <button type="button" class="btn btn-primary " data-bs-dismiss="modal" onclick="insertar(this.value)" id="ip_inicial" >Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
 <div class="container colorfondo">
       
       <div class="container contenedor1" >
@@ -88,11 +114,7 @@
             </div>
             
                <div  class="col-sm  align-self-end divPresentacion" >
-                  <!--<h5 class="card-title presentacion">Renzo Galiano</h5>
-                  <p class="card-text presentacion">Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>-->
-                  
-                  <!-- <button onclick="editar_presentacion()" class="bi bi-pencil botonera" id="boton_presentacion"  ></button> -->
-                 <!-- <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>-->
+                                  
                   <p  class="presentacion" id="texto_presentacion"> Renzo Galiano <br> Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
                   <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
 
@@ -105,54 +127,54 @@
           
 </div>
       
-       
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div  class="acerca-de container redaccion " >
              <h2 style=" display:inline"  >Acerca de mi </h2>
             
-            <!-- <button onclick="editar_guardar('texto_a_modificar1','idtextarea1')" class="bi bi-pencil botonera"  ></button> -->
+             <div id="acerca"> 
+            <button type="button" onclick="AGREGAR(parentNode.id)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
-           <!-- <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>-->
-           <div id="acerca"> <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil botonera"  id="Modal1">  </button></div>
-              
             <p id="texto_a_modificar1" >Soy Farmaceutico y estoy dando los primero pasos en programación. </p>
-            
+        </div>
             <textarea type="text"  class="form-control" id="idtextarea1" style="display:none;"> </textarea>
          </div>
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="experiencia container redaccion " > 
             <h2 style=" display:inline">Experiencia</h2>
             
-            <!-- <button onclick="editar_guardar('texto_a_modificar2','idtextarea2')" class="bi bi-pencil botonera"  ></button> -->
+            <div id="experiencia"> 
+            <button type="button" onclick="AGREGAR(parentNode.id)" data-bs-toggle="modal" data-bs-target="#exampleModa2" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_experiencia" ></button>
-            <div id="experiencia"> <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil botonera"  id="Modal1">  </button></div>
-              <!-- <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>-->
             <p  id="texto_a_modificar2">Sanatorio Esperanza </p>
             <p><time>2020</time>-<time>2021</time></p>
+            <p>descripcion</p>
+            </div>
                <textarea type="text" class="form-control" id="idtextarea2" style="display:none;"> </textarea>
          </div>
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="educacion container redaccion "  >
             <h2 style=" display:inline">Educación</h2>
-            <div id="educacion"> <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil botonera"  id="Modal1">  </button></div>
-            <!-- <button onclick="editar_guardar('texto_a_modificar3','idtextarea3')" class="bi bi-pencil botonera"  ></button> -->
-            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             
-              <!-- <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>-->
+            <div id="educacion"> 
+            <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <p id="texto_a_modificar3">Farmaceutico - UNR. </p>
-            <p><time>2010</time>-<time>2013</time></p>
+            <p>institucion</p>
+            <p>fecha <time>2010</time>-<time>2013</time></p>
+        </div>
             
                <textarea type="text" class="form-control" id="idtextarea3" style="display:none;"> </textarea>
           </div>
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="skill container redaccion" id="skill">
             <h2 style=" display:inline">Skill</h2>
-            
-            <!-- <button onclick="editar_guardar('texto_a_modificar4','idtextarea4')" class="bi bi-pencil botonera" id="skill" ></button> -->
+                    
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_skill" ></button>
-            <div id="skilld"> <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil botonera"  id="Modal1">  </button></div>
-              <!-- <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class="bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>-->
-            <p id="texto_a_modificar4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            
+            <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+            <div id="skilld"> 
+           
+            <p id="texto_a_modificar4"> </p>
+            </div>
                <textarea type="text" class="form-control" id="idtextarea4" style="display:none;"> </textarea>
             
             <div class="progress ">
@@ -168,34 +190,23 @@
               <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"> Adaptación</div>
             </div>
          </div>
-
-         <!-- <div class="proyectos container redaccion" id="proyectoss">
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+         <div class="proyectos container redaccion" id="proyectoss">
            
-            <button onclick="editar_guardar('texto_a_modificar5','idtextarea5')" class="bi bi-pencil botonera"  ><span id=""></span></button>
-            
             <h2 style=" display:inline">Proyectos</h2>
+          
             <div id="texto_a_modificar5" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_proyectos" ></button>
+            <p>Nombre</p>
+            <p>fecha</p>
+            <p>descripcion</p>
+            <p>link</p>
             </div>
             <textarea type="text" id="idtextarea5" style="display:none;"> </textarea>
             
-         </div> -->
-<!--
-         <div class="container redaccion" id="Edproyectos">
-            <h2 style=" display:inline">Proyectos</h2>
-            
-            
-            <div >
-            <div class="mb-3">
-               <input type="text" id="titulo" class="form-control" id="exampleFormControlInput1" placeholder="TITULO" >
-             </div>
-             <div class="mb-3">
-               <textarea type="text" class="form-control"  id="inputText"    ></textarea>
-               <button onclick="agregarProyecto()" class="btn btn-dark rounded float-end boton_foo" type="button"  >Agregar</button>
-             </div>
-            </div>
          </div> 
--->
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
  
          <footer class=" container text-center text-white cajafooter" >
             <div class="  ">
@@ -214,7 +225,7 @@
             </div>
             <!-- Copyright -->
          </footer>
-         
+ <!--------------------------------------------------------------------------------------------------------------------------------------------> 
         
 
 </body >
@@ -288,7 +299,7 @@ function BORRAR(parametro){
 
 
 
-id_camera
+
 function habilitar_edicion(){
    var onoff = document.getElementById("onoff");
    var botonera = document.getElementsByClassName("botonera");
@@ -330,186 +341,7 @@ function habilitar_edicion(){
       Div_objetivo.parentNode.remove();}
    
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
-
-   //variables creadas para darle identidad a cada articulo creado
-         var id_newp = 0;
-         var id_newh1 = 0;
-         var id_newTextarea = 0;
-         //var id_newButton = 0;
-         var id_newBorrar = 0;
-        // incremento diferencia (usando numeros de distinta magnitud como id)
-      function agregarProyecto(){
-        
-         id_newp = id_newp + 1;
-         id_newTextarea = id_newTextarea + 100 ;
-         //id_newButton = id_newButton + 1000 ;  
-         id_newh1 = id_newh1 + 1000; 
-         id_newBorrar = id_newBorrar + 100000 ;    
-         
-       
-      //genero el contenedor(div), el titulo(h1), el (p) , un textarea y un boton. Se le asignan sus atributos
-        var newDiv = document.createElement("div");
-        newDiv.setAttribute("class","container nuevo");
-        var newh1 = document.createElement("h2");
-        newh1.setAttribute("id",id_newh1);
-        var newp = document.createElement("p");
-        newp.setAttribute("id",id_newp);
-        //var newButton =document.createElement("button");
-        //newButton.setAttribute("id", id_newButton)
-        
-
-        var newButtonTitle =document.createElement("button");
-        newButtonTitle.setAttribute("class","bi bi-pencil botonera");
-        newButtonTitle.setAttribute("data-bs-toggle", "modal")
-        newButtonTitle.setAttribute("data-bs-target", "#exampleModal")
-        newButtonTitle.setAttribute("onclick", "cambiarIp(this.nextElementSibling.id)")
-        newButtonTitle.setAttribute("style", "display:inline")
-
-        var newButton2 =document.createElement("button");
-         newButton2.setAttribute("class","bi bi-pencil botonera");
-         newButton2.setAttribute("data-bs-toggle", "modal")
-         newButton2.setAttribute("data-bs-target", "#exampleModal")
-         newButton2.setAttribute("onclick", "cambiarIp(this.nextElementSibling.id)")
-         newButton2.setAttribute("style", "display:inline")
-
-        var newTextarea =document.createElement("textarea");
-        newTextarea.setAttribute("id",id_newTextarea);
-        newTextarea.setAttribute("style","display:none");
-        newTextarea.setAttribute("class","form-control"); 
-        var newBorrar = document.createElement("button");
-        newBorrar.setAttribute("class","bi bi-trash rounded float-end basurero");
-        newBorrar.setAttribute("id", id_newBorrar)
-        newBorrar.setAttribute("style", "display:inline")
-        //seleccion y obtengo los valores correspondientes a id:inputText (donde escribo) y id:titulo (titulo que escribo)
-        var inputText = document.getElementById("inputText").value;
-        var titulo = document.getElementById("titulo").value; 
-        
-        //inserto el boton, h1, p y textarea dentro del div
-        newDiv.appendChild(newBorrar);
-        //newDiv.appendChild(newButton);
-        
-        newDiv.appendChild(newButtonTitle);
-        newDiv.appendChild(newh1);
-        newDiv.appendChild(newButton2);
-        newDiv.appendChild(newp);
-        newDiv.appendChild(newTextarea);
-        
-        //creo un nodo de texto con la info dentro de titulo, y lo inserto dentro de h1
-         var newTitle = document.createTextNode(titulo) 
-         newh1.appendChild(newTitle); 
-         
-         //creo un nodo de texto con la info dentro de inputText, y lo inserto dentro de p
-         var newContent = document.createTextNode(inputText);
-         newp.appendChild(newContent);
-       
-        //selecciono al elemento Edproyectos (id del div contenedor) e inserto todo debajo de dicho div
-         var currentDiv = document.getElementById("Edproyectos"); 
-         document.body.insertBefore(newDiv, currentDiv);
-         
-         
-         //tomo lo que esta escrito en detalle y lo copio en textarea de edicion (que aparezca lo que inserte previamente)
-         document.getElementById(id_newTextarea).innerHTML = document.getElementById("inputText").value;
-
-        /* // DESACTIVO EL TITULO
-         let a = document.getElementById(i);
-         let texto_sin_salto = document.getElementById("inputText").value;
-         let texto_con_salto = texto_sin_salto.replaceAll('\n', '<br/>');
-         a.innerHTML=texto_con_salto*/
-         //resumen de lo anterior, tomo el texto de inputText y le saco los espacio para ponerlo en:
-         document.getElementById(id_newp).innerHTML=document.getElementById("inputText").value.replaceAll('\n', '<br/>');
-
-       
-         //evento click sobre boton activa funcion que reconoce id del boton activado y en funcion de este determina 
-         // cuales de los <p> y textarea debe hacer visible u ocultar
-        
-        
-         /*   document.getElementById(id_newButton).onclick= function() {
-        //uso el id del boton como punto de referencia y la division me devuelve los id de p y de textarea necesario (encontre otra forma)
-         let parrafo= this.id/1000;
-         let textoare =this.id/10;
-         let txtModif = document.getElementById(parrafo);
-         let textArea = document.getElementById(textoare);
-           if (textArea.style.display =="none") {
-                  txtModif.style.display = "none";
-                  textArea.style.display="";}
-            else {var text =  textArea.value.replaceAll('\n', '<br/>');//tranforma los saltos en <br>
-                  txtModif.innerHTML = text;
-                  txtModif.style.display = "";
-                  textArea.style.display="none";}}*/
-               
-               
-         document.getElementById(id_newBorrar).onclick= function() { 
-
-            var Div_objetivo = document.getElementById(this.id)
-            Div_objetivo.parentNode.remove();}
-              }
-
-
-         
-
-   
-//-----------------------------------------------------------------------------------------------------------------------------------------
-
-   //boton que alterna entre editar y guardar.
-
-   function editar_guardar(texto_a_modificar, idtextarea ){
-    
-    var txtModif = document.getElementById(texto_a_modificar);
-    var textArea = document.getElementById(idtextarea);
-    
-      if (textArea.style.display =="none") {
-         txtModif.style.display = "none";
-         textArea.style.display="";
-         }
-      else {var text =  textArea.value.replaceAll('\n', '<br/>');
-         txtModif.innerHTML = text;
-         txtModif.style.display = "";
-         textArea.style.display="none";}}
-
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-
-function editar_presentacion(){
-  
-   //document.getElementById("txtarea_presentacion").value=document.getElementById("texto_presentacion").innerText;
-   
-   var txtModif = document.getElementById("texto_presentacion");
-   var textArea = document.getElementById("txtarea_presentacion");
-   
-   
-   if (textArea.style.display =="none") {
-         txtModif.style.display = "none";
-         textArea.style.display="";}
-   else {var text =  textArea.value.replaceAll('\n', '<br/>');
-         txtModif.innerHTML = text;
-         txtModif.style.display = "";
-         textArea.style.display="none";}
-         
-         
-      }
-
- //-----------------------------------------------------------------------------------------------------------
- //recibe el value desde boton guardar del modal, y lo usa como ip para modificar el texto objetivo
- function insertar(parametro){
-
-document.getElementById(parametro).innerText=document.getElementById("escritura").value;
-document.getElementById("escritura").value="";
-}
-
-//recibe el valor del ip del objetivo o un value (que es igual al ip objetivo), y lo inserta como value para el boton guardar del modal
-function cambiarIp(parametro){
-var newValue = parametro;
-document.getElementById("ip_inicial").setAttribute("value",newValue);
-}    
-         
-
-
-
-
-
-
-
-
-//-----------------------------------------------------------------------------------------------------------------------------------------
+/-----------------------------------------------------------------------------------------------------------------------------------------
 
   function ocultarEmail(){
    if(document.getElementById("formularioEmail").style.display ==""){
@@ -522,21 +354,7 @@ document.getElementById("ip_inicial").setAttribute("value",newValue);
    
  //---------------------------------------------------------------------------------------------------
    
- //selecciona a donde pertenece
-    function selector(editor, texto_a_modificar) {
-     x = editor;//id del input que recibe texto
-     y = texto_a_modificar;//id del "p", (texto a modificar)
-     habilitar_input(x); //llama a la funcion habilitar y le pasa "x" como parametro
-     let textarea = document.getElementById(x) //selecciona "x", y lo tranforma en variable
-     textarea.addEventListener('keyup', (e) => {//escucha 
-     logMessage('Key "${e.key}" relased [event:keyup]')
-     if(e.key == "Enter"){document.getElementById(x).style.display = "none"}})
-     document.getElementById(editor).value ="";
-    }
-    //habilita editor, cambia el texto y detecta enter
-    function habilitar_input(x) {document.getElementById(x).style.display="block";}
-    function cambiar_texto(valor) {document.getElementById(y).innerText = valor;}
-    function logMessage(message){console.log(message + "<br>");}
+ 
 
     
 

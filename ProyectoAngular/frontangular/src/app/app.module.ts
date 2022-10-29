@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeadComponent } from './componentes/head/head.component';
+import { HeaderComponent } from './componentes/header/header.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
@@ -10,18 +10,22 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { SkillComponent } from './componentes/skill/skill.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { MailComponent } from './componentes/mail/mail.component';
+import { ModalComponent } from './componentes/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeadComponent,
+    HeaderComponent,
     BannerComponent,
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
     SkillComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    MailComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule

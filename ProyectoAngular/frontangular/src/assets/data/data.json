@@ -1,0 +1,40 @@
+{
+"name":"Renzo Galiano",
+"backImage":"",
+"image":"",
+"age":"35 años",
+"company":{},
+"school":{},
+"ubication":"Santa Fe, Argentina",
+"about":"Programador Full Stack Junior",
+"acerca_de_mi":"Soy Farmaceutico y estoy dando los primero pasos en programación",
+"experiencia":[
+  {
+  "position":"Farmaceutico",
+  "company":"Farmacia de la Plaza",
+  "start":"2019",
+  "end":"2020"},
+  {
+  "position":"Farmaceutico",
+  "company":"Sanatorio Esperanza",
+  "start":"2020",
+  "end":"2021"}],
+
+  "educacion":[
+  {
+    "school":"Universidad Nacional de Rosario",
+    "title":"Farmaceutico",
+    "img":"",
+    "career":"Farmacia",
+    "start":"2010",
+    "end":"2013"
+  }],
+"aptitudes":""
+
+
+
+
+
+
+
+}

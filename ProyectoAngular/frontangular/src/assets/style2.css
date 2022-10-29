@@ -1,7 +1,7 @@
 
 
 body{
-    background-color:  #cecbf350; 
+    background-color:  #cecbf350;
     border:2px solid rgb(12, 10, 0);
     background: radial-gradient(#58b46780, #64faff7e);
    padding: 5px 5px;
@@ -19,21 +19,21 @@ padding-top: 10px;
 object-fit: fill;
 }
 
- 
+
 
 
 .modal-content, .modal-dialog{
    background: radial-gradient(#58b46780, #64faff7e);
    border: 1px solid  #d2b4de ;
-   max-width: 100%; 
+   max-width: 100%;
    word-wrap: break-word;
    overflow: auto;
    padding: 5px;
    border-radius: 15px;
    }
-  
+
    #ip_inicial{ border-radius: 15px;}
-   
+
 .presentacion{font-family: URW Chancery L, cursive;
 }
 
@@ -48,25 +48,25 @@ opacity: 1;}
 
 #id_camera{display: none;}
 
-   
+
 .Email form{
    padding: 1px;
    margin: 5px;}
 
- 
-      
+
+
 .fa-pencil {float: right;}
 
 .divPresentacion{
    border-radius: 15px;
-   max-width: 100%; 
+   max-width: 100%;
    overflow: auto;}
 
 .redaccion, .nuevo, .cajafooter {
    background: radial-gradient(#58b46780, #64faff7e);
    border: 2px solid  #d2b4de ;
    border-radius: 15px;
-   max-width: 100%; 
+   max-width: 100%;
    word-wrap: break-word;
    overflow: auto;
    padding: 10px;
@@ -90,7 +90,7 @@ display: none;}
    display: none;
    }
 
-   
+
 
  #inputText{
    border-radius: 15px;
@@ -113,7 +113,7 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
    padding:15px;
    width:100%;
    min-height: 70px;
-   
+
    margin:20px auto;
    display:block;
    border-radius:10px;
@@ -125,4 +125,4 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
 border-radius: 15px;
 resize: none;  }
 
- 
+

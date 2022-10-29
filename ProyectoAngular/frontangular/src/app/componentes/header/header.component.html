@@ -1,0 +1,56 @@
+
+
+<app-modal></app-modal>
+
+
+<div class="container colorfondo">
+
+  <!--LOGO ARG PROGRAMA -->
+  <div class="container contenedor1" >
+     <div class="row justify-content-between contenedor1 "  >
+     <div class="col-4 col-sm-2 iconos align-self-center"  >
+        <img  src="./assets/APLogo-20-20.png"  alt="foto de cabecera"   style="max-width: 100%;"  >
+     </div>
+<!-- BOTON LOGIN-->
+     <div class="col-8 iconos align-self-center"  >
+        <button type="button" id="botonLogin" class="btn btn-dark rounded float-end"  onclick="ocultarEmail()">LOGIN</button>
+     </div>
+  </div>
+</div>
+
+
+<app-mail></app-mail>
+
+<!-- FOTO DE PERFIL-->
+ <div class="container" >
+   <div class="row "  >
+     <div class="col " >
+        <div class="row" >
+          <div class="col  " style= "max-width:200px;   " >
+           <img src="./assets/fotomia.jpg"  class="img-fluid rounded-circle imagenPerfil "  alt="fotografia de Renzo"  >
+
+           <div class="editFotoPerfil" id="id_camera" >
+               <label for="file-input" > <i class="fa fa-camera" aria-hidden="true" ></i>
+               </label>
+                 <input id="file-input" type="file" >
+           </div>
+
+        </div>
+
+           <div  class="col-sm  align-self-end divPresentacion" >
+              <button type="button" onclick="cambiarIp(this.nextElementSibling.id)" class=" bi bi-pencil botonera"  id="Modal1" data-bs-toggle="modal" data-bs-target="#exampleModal">  </button>
+              <span id="texto_presentacion" class="presentacion">
+              <p> Renzo Galiano </p>
+              <p>Programador Full Stack Junior</p>
+              <p>35 años</p>
+              <p>Santa Fe, Argentina</p></span>
+              <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
+
+           </div>
+        </div>
+     </div>
+
+    </div>
+  </div>
+
+</div>
