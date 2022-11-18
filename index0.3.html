@@ -5,19 +5,39 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link href="style2.css" rel="stylesheet">
+	<link href="style3.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
    <title>Frontend</title>
+   
+   
 </head>
 
 <body  >
+
+    <!--Modal acerca de mi-->
+<div class="modal fade" id="Modaldescripcion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style=" padding:0.5px ">
+        <div> Descripcion <textarea type="text" style="width:100%" class="escritura"> </textarea></div>
+                 </div>
+        <div class="modal-footer" id="id_del_padre">
+          <button type="button" class="btn btn-primary " data-bs-dismiss="modal" onclick="insertar(this.value)" id="ip_inicial" >Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-<!--Modal para facilitar la edicion de los textos-->
-   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+<!--Modal educacion-->
+   <div class="modal fade" id="Modaleducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -25,13 +45,17 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" style=" padding:1px ">
-            <input class="titulo1 " type="text"  >
-            <input class="titulo2 " type="text"  >
-            <textarea type="text" style="width:100%;height:15vh;resize: none" class="escritura"> </textarea>
-          </div>
+
+            <div>Titulo<input id="titulos" type="text" style="width:100%"></div>
+            <div>Institución<input id="institucion" type="text" style="width:100%" ></div><br>
+            <div class="row">
+                <div class="col">Inicio <input id="desdeedu" type="date" min="1940-01-01" id="datePickerdesde"/></div>
+                <div class="col">Fin <input id="hastaedu" type="date" min="1940-01-01" id="datePickerhasta" ></div>
+            </div><br>
+               </div>
           <div class="modal-footer" id="id_del_padre">
             
-           <button type="button" class="btn btn-primary " data-bs-dismiss="modal" onclick="insertar(this.value)" id="ip_inicial" >Guardar</button>
+           <button type="button" class="btn btn-primary " name="dd" data-bs-dismiss="modal" onclick="guardarEducacion(this.name)" id="ip_edu" >Guardar</button>
           </div>
         </div>
       </div>
@@ -39,7 +63,7 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
  <!--------------------------------------------------------------------------------------------------------------------------------------------> 
 <!--Modal para facilitar la edicion de los textos-->
-<div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Modalexperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -47,16 +71,43 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" style=" padding:0.5px ">
-        <div>Posicion/Cargo<input class="cargo " type="text" ></div>
-        <div>Empresa<input class="empresa " type="text" ></div>
-        <div>Fecha Inicio<input class="desde " type="text" ></div>
-        <div>Fecha Fin<input class="hasta " type="text" ></div>
-          
-          <textarea type="text" style="width:100%;height:15vh;resize: none" class="escritura"> </textarea>
-        </div>
+       <div>Posicion/Cargo<input id="cargo " type="text" style="width:100%"></div>
+        <div>Empresa<input id="empresa " type="text" style="width:100%" ></div><br>
+        <div class="row">
+            
+            <div class="col">Inicio <input id="desde " type="date" min="1940-01-01" id="datePickerdesde"/></div>
+            <div class="col">Fin <input id="hasta " type="date" min="1940-01-01" id="datePickerhasta" ></div>
+        </div><br>
+        <div> Descripcion <input id="descripcionedu " type="text" style="width:100%" class="escritura"> </input></div>
+                 </div>
         <div class="modal-footer" id="id_del_padre">
+          <button type="button" class="btn btn-primary " data-bs-dismiss="modal"  name="aaa" id="id_exp" >Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+<!--Modal para proyectos-->
+<div class="modal fade" id="modalproyecto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
           
-         <button type="button" class="btn btn-primary " data-bs-dismiss="modal" onclick="insertar(this.value)" id="ip_inicial" >Guardar</button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style=" padding:0.5px ">
+       <div>Titulo/Nombre <input id="cargo" class="cargo " type="text" style="width:100%"></div>
+        <br>
+        <div class="row">
+            <div class="col">Inicio <input class="desde" id="desde" type="date" min="1940-01-01" id="datePickerdesde"/></div>
+            <div class="col">Fin <input class="hasta" id="hasta" type="date" min="1940-01-01" id="datePickerhasta" ></div>
+        </div><br>
+        <div> Descripcion <textarea id="descrip" type="text" style="width:100%;" class="escritura"> </textarea></div><br>
+      <div>link <br> <input id="link" type="text"></div>           
+      </div>
+        <div class="modal-footer" id="id_del_padre">
+          <button type="button" class="btn btn-primary " data-bs-dismiss="modal" onclick="guardarproy(this.name)" name="acaa" id="id_proy" >Guardar</button>
         </div>
       </div>
     </div>
@@ -132,45 +183,54 @@
              <h2 style=" display:inline"  >Acerca de mi </h2>
             
              <div id="acerca"> 
-            <button type="button" onclick="AGREGAR(parentNode.id)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+            <button type="button"  data-bs-toggle="modal" data-bs-target="#Modaldescripcion" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
             <p id="texto_a_modificar1" >Soy Farmaceutico y estoy dando los primero pasos en programación. </p>
         </div>
             <textarea type="text"  class="form-control" id="idtextarea1" style="display:none;"> </textarea>
+            <div style="text-align:center"><i class="bi bi-plus-circle" type="button" data-bs-toggle="modal" data-bs-target="#Modaldescripcion" id="jkddl" "></i></div>
          </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="experiencia container redaccion " > 
-            <h2 style=" display:inline">Experiencia</h2>
+            <h2 >Experiencia</h2>
             
-            <div id="experiencia"> 
-            <button type="button" onclick="AGREGAR(parentNode.id)" data-bs-toggle="modal" data-bs-target="#exampleModa2" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+            <div id="id_experiencia"> 
+            <button type="button"  data-bs-toggle="modal" data-bs-target="#Modalexperiencia" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_experiencia" ></button>
-            <p  id="texto_a_modificar2">Sanatorio Esperanza </p>
-            <p><time>2020</time>-<time>2021</time></p>
-            <p>descripcion</p>
+            <div style="display:inline-flex">
+                <p >Farmaceutico </p>
+                <p>Sanatorio Esperanza</p>
+                <p><time>2020</time>-<time>2021</time></p>
+                <p>descripcion</p>
             </div>
-               <textarea type="text" class="form-control" id="idtextarea2" style="display:none;"> </textarea>
+         
+            </div>
+              
+               <div style="text-align:center"><i class="bi bi-plus-circle" type="button" data-bs-toggle="modal" data-bs-target="#Modalexperiencia" id="jkl" "></i></div>
          </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-         <div class="educacion container redaccion "  >
-            <h2 style=" display:inline">Educación</h2>
+         <div class="educacion container redaccion " id="cuarto" >
+            <h2 >Educación</h2> 
             
-            <div id="educacion"> 
-            <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
-            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
-            <p id="texto_a_modificar3">Farmaceutico - UNR. </p>
-            <p>institucion</p>
-            <p>fecha <time>2010</time>-<time>2013</time></p>
-        </div>
+            <div id="id_educacion"> 
+                <button type="button"   class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+                <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+                <div style="display:inline-flex" id="tercero" >
+                    <p>Farmaceutico </p>
+                    <p>institucion</p>
+                    <p> <time>2010</time>-<time>2013</time></p>
+                </div>
+            </div>
+           
             
-               <textarea type="text" class="form-control" id="idtextarea3" style="display:none;"> </textarea>
+            <div style="text-align:center" id="segundo" ><i id="inicial" type="button" class="bi bi-plus-circle" data-bs-toggle="modal" data-bs-target="#Modaleducacion" onclick="cambiaridEducacion(parentNode.id)"></i></div>
           </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="skill container redaccion" id="skill">
             <h2 style=" display:inline">Skill</h2>
-                    
+            <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>      
             <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_skill" ></button>
-            <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+            
             <div id="skilld"> 
            
             <p id="texto_a_modificar4"> </p>
@@ -192,20 +252,28 @@
          </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="proyectos container redaccion" id="proyectoss">
+            <h2 style="display:inline">Proyectos</h2> <p></p>
            
-            <h2 style=" display:inline">Proyectos</h2>
-          
-            <div id="texto_a_modificar5" >
-            <button type="button" onclick="AGREGAR(parentNode.id)" class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
-            <button onclick="borrar(this.id)" class="bi bi-trash rounded float-end basurero" id="borrar_proyectos" ></button>
-            <p>Nombre</p>
-            <p>fecha</p>
-            <p>descripcion</p>
-            <p>link</p>
+           
+            <div id="id_proyecto" style="display:none">
+               <button type="button"    class="bi bi-pencil rounded float-end botonera"  id="Modal1">  </button>
+               <button onclick="borrar(parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_proyectos" ></button>
+               
+               <div id="Nombre"></div>
+               <div style="display:inline-flex" id="fechadesde"></div>
+               <div style="display:inline-flex" id="fechahasta"></div>
+               <div id="descripcion"></div>
+               <div id="link"></div>
+               <p></p>
             </div>
-            <textarea type="text" id="idtextarea5" style="display:none;"> </textarea>
-            
-         </div> 
+         
+            <i type="button" class="bi bi-plus-circle botonplus" data-bs-toggle="modal" data-bs-target="#modalproyecto" 
+            onclick="cambioidproyecto('id_proyecto')"></i>
+                             
+            <div style="text-align:center" id="dskl"> </div>
+                  
+         </div>
+         <!--onclick="cambioidproyecto(this.previousElementSibling.id)"--> 
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
  
          <footer class=" container text-center text-white cajafooter" >
@@ -225,12 +293,79 @@
             </div>
             <!-- Copyright -->
          </footer>
- <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-        
 
-</body >
+          
+ <!--------------------------------------------------------------------------------------------------------------------------------------------> 
+ <script>datePickerdesde.max = new Date().toISOString().split("T")[0];</script>
+ <script>datePickerhasta.max = new Date().toISOString().split("T")[0];</script>
+ 
+</body >   
+ 
+
 <script>
 //--------------------------------------------------------------------------------------------------------------------------------------------
+
+function cambioidproyecto(parametro){
+  
+   let proy = document.getElementById("id_proy");
+   proy.setAttribute("name",parametro)
+}
+ var n = 0
+function guardarproy(parametro){
+   n++
+   var nuevo_id = (parametro + n)
+   var clone = document.getElementById(parametro).cloneNode(true)
+   var posicion = document.getElementById(parametro);
+   var id_padre = document.getElementById(parametro).parentNode;
+   id_padre.insertBefore(clone, posicion);
+   posicion.setAttribute("id",nuevo_id)
+   posicion.setAttribute("style","display:inline")
+   document.getElementById(nuevo_id).children[2].appendChild(document.createTextNode(document.getElementById("cargo").value)) 
+   document.getElementById(nuevo_id).children[3].appendChild(document.createTextNode(document.getElementById("desde").value + " hasta ")) 
+   document.getElementById(nuevo_id).children[4].appendChild(document.createTextNode(document.getElementById("hasta").value)) 
+   document.getElementById(nuevo_id).children[5].appendChild(document.createTextNode(document.getElementById("descrip").value))
+   document.getElementById(nuevo_id).children[6].appendChild(document.createTextNode(document.getElementById("link").value))  
+
+
+}
+
+/*document.getElementById("Nombre").setAttribute("id",nuevo_id)
+   document.getElementById("fechadesde").setAttribute("id",nuevo_id)
+   document.getElementById("fechahasta").setAttribute("id",nuevo_id)
+   document.getElementById("descripcion").setAttribute("id",nuevo_id)
+   document.getElementById("link")*/
+
+
+
+
+
+function cambiaridEducacion(parametro){
+  let edu = document.getElementById("ip_edu");
+   edu.setAttribute("name",parametro)
+}
+
+function guardarEducacion(parametro){
+    
+    var titulo = document.getElementById("titulos").value;
+    var institucion=document.getElementById("institucion").value;
+    var desde= document.getElementById("desdeedu").value;
+    var hasta= document.getElementById("hastaedu").value;
+    var texto = titulo+ '\n' + "-" +'\n' + institucion + "-"+"("+'\n'+ desde + "al"+'\n'+hasta+")"
+    var currentDiv = document.getElementById(parametro);
+    var id_padre = document.getElementById(parametro).parentNode;
+    var newDiv = document.createElement("div");
+    var newp = document.createElement("p");
+    var text = document.createTextNode(texto);
+       newp.setAttribute("id","p");
+       newp.appendChild(text);
+       newDiv.appendChild(newp);
+    id_padre.insertBefore(newDiv, currentDiv);
+}
+
+
+
+
+
 
 
 let id_inicial_guardar= 0;
@@ -333,15 +468,21 @@ function habilitar_edicion(){
 //formularioEmail.style.display == ""
 //id_camera.style.display == "none"
 
-
+function borrar(parametro){
+      
+      var Div_objetivo = document.getElementById(parametro)
+           
+      Div_objetivo.remove();}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
-   function borrar(parametro){
+   /*function borrar(parametro){
+      alert(parametro)
       var Div_objetivo = document.getElementById(parametro)
-      Div_objetivo.parentNode.remove();}
+      alert(Div_objetivo.parentNode.id)      
+      Div_objetivo.parentNode.remove();}*/
    
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
-/-----------------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------------
 
   function ocultarEmail(){
    if(document.getElementById("formularioEmail").style.display ==""){
@@ -368,7 +509,8 @@ function habilitar_edicion(){
             el.style.cssText = 'height:' + el.scrollHeight + 'px';
          },0);
          }
-</script>
 
+         
+</script>
 
 </html>

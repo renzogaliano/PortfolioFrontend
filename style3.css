@@ -116,17 +116,15 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
    display:block;
    border-radius:10px;
    resize: none;}
+   
+   .cargo, .empresa, .desde, .hasta{ padding-left:10px;
+    border:2px solid #55667775;
+    border-radius: 15px;
+    resize: none;}
+   
+   i {text-align:center}
 
-   input{ 
-      padding-left:10px;
-      width:50%;
-      border:2px solid #55667775;
-      border-radius: 15px;
-      resize: none;} 
-
-      .desde, .hasta{border:2px solid #55667775;
-         border-radius: 15px;
-         resize: none;}
+      
 
 
 
