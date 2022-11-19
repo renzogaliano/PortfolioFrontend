@@ -320,9 +320,20 @@ function guardarproy(parametro){
    id_padre.insertBefore(clone, posicion);
    posicion.setAttribute("id",nuevo_id)
    posicion.setAttribute("style","display:inline")
+
    document.getElementById(nuevo_id).children[2].appendChild(document.createTextNode(document.getElementById("cargo").value)) 
-   document.getElementById(nuevo_id).children[3].appendChild(document.createTextNode(document.getElementById("desde").value + " hasta ")) 
-   document.getElementById(nuevo_id).children[4].appendChild(document.createTextNode(document.getElementById("hasta").value)) 
+   //document.getElementById(nuevo_id).children[3].appendChild(document.createTextNode(document.getElementById("desde").value + " hasta ")) 
+  // document.getElementById(nuevo_id).children[4].appendChild(document.createTextNode(document.getElementById("hasta").value)) 
+  var valorfechadesde=document.getElementById("desde").value
+  var json1 = JSON.stringify(valorfechadesde);
+  var valorfechahasta=document.getElementById("hasta").value
+  var json2 = JSON.stringify(valorfechahasta);
+json1=json1[0]+json1[9]+json1[10]+json1[8]+json1[6]+json1[7]+json1[5]+json1[1]+json1[2]+json1[3]+json1[4]+json1[11]
+json2=json2[0]+json2[9]+json2[10]+json2[8]+json2[6]+json2[7]+json2[5]+json2[1]+json2[2]+json2[3]+json2[4]+json2[11]
+
+  document.getElementById(nuevo_id).children[3].innerText= (json1 + " hasta ")
+  document.getElementById(nuevo_id).children[4].appendChild(document.createTextNode(json2)) 
+
    document.getElementById(nuevo_id).children[5].appendChild(document.createTextNode(document.getElementById("descrip").value))
    document.getElementById(nuevo_id).children[6].appendChild(document.createTextNode(document.getElementById("link").value))  
 

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="style4.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+   <title>Frontend</title>
+   
+   
+</head>
+
+<body  >
+
+    
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+<div class="container colorfondo">
+      
+      <div class="container contenedor1" >
+         <div class="row justify-content-between contenedor1 "  >
+         <div class="col-4 col-sm-2 iconos align-self-center"  >
+            <img  src="APLogo-20-20.png"  alt="foto de cabecera"   style="max-width: 100%;"  >
+         </div>
+         
+         <div class="col-8 iconos align-self-center"  >
+            <button type="button" id="botonLogin" class="btn btn-dark rounded float-end"  onclick="ocultarEmail()">LOGIN</button>
+            
+         </div>
+      </div>
+   </div>
+       
+       
+     <div class="container Email" id="bodyMail" >
+      <div class="row justify-content-center">
+        <div class="col col-sm-4 ">
+          <form id="formularioEmail" style="display: none; align-self: center;" >
+            <div>			
+               <input type="email" class="form-control"  placeholder="Ingrese su Email" style="margin-bottom:4px">              
+            </div>
+            <div >			  
+               <input type="password" class="form-control"  placeholder="Ingrese su Contraseña" style="margin-bottom:4px">
+            </div>
+            <div style="display: flex; justify-content: center;">
+               <button type="submit" class="btn btn-primary"  >ENVIAR  </button>
+               
+            </div>
+           </form>
+         </div>
+      </div>
+    </div>
+     
+     
+     <div class="container" >
+       <div class="row "  >
+         <div class="col " >
+            <div class="row" >
+              <div class="col  " style= "max-width:200px;   " >
+               <img src="./fotomia.jpg"  class="img-fluid rounded-circle imagenPerfil "  alt="fotografia de Renzo"  >
+              
+               <div class="editFotoPerfil" id="id_camera" >
+                   <label for="file-input" > <i class="fa fa-camera" aria-hidden="true" ></i>
+                   </label>
+                     <input id="file-input" type="file" >
+               </div>
+             
+            </div>
+            
+               <div  class="col-sm  align-self-end divPresentacion" >
+                                  
+                  <p  class="presentacion" id="texto_presentacion"> Renzo Galiano <br> Programador Full Stack Junior <br>35 años <br>Santa Fe, Argentina </p>
+                  <textarea  id="txtarea_presentacion" style="display: none;"></textarea>
+
+               </div>
+            </div>
+         </div>
+         
+        </div>
+      </div>
+          
+</div>
+      
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+         <div  class="acerca-de container redaccion " >
+             
+            <h2  >Acerca de mi </h2>
+            
+            <div id="clonaracerca" style="display:none"> 
+
+               <button type="button"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+               <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
+           
+           
+               
+               <div id="inputacerca"  class="inputeditable" >
+                  <button type="button"  onclick="guardar(this.parentNode.id,1)" class="bi bi-pencil rounded float-end botonera" > GUARDAR  </button>
+                  <input type="text" placeholder="nombre">            
+               </div>
+                  
+               <div id="pacerca" class="parrafoseditables" style="display:none">
+                  <p></p>
+               </div>
+            </div>
+         
+              <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaracerca')"></i></div>
+            </div>
+         
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+         <div class="experiencia container redaccion " id="a" > 
+            <h2 >Experiencia</h2>
+            
+            <div id="clonarexp" style="display:none""> 
+               
+               <button type="button"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+               <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+               
+               
+                  <div id="jefe" class="inputeditable">
+                     <button onclick="guardar(this.parentNode.id,5)" type="button"   class="bi bi-pencil rounded float-end botonera" > GUARDAR  </button>
+                 <input type="text" placeholder="nombre">            
+                 <input type="date"><input type="date">
+                 <input type="text"placeholder="descripcion">
+                 <input type="text"placeholder="link">            
+                  </div>
+                 
+                  <div id="hermano" class="parrafoseditables" style="display:none">
+                    <p id="1"></p>
+                    <p id="2"></p><p id="jj"></p>
+                    <p id="3"></p>
+                    <p id="4"></p>
+                    
+                 </div>
+             </div>
+              
+            <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarexp',5)"></i></div>
+         </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+         <div class="educacion container redaccion " id="cuarto" >
+            <h2 >Educación</h2> 
+            
+            <div id="clonaredu" style="display:none"> 
+              
+               <button type="button"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+               <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+               
+               
+                  <div id="jefe" class="inputeditable">
+                     <button onclick="guardar(this.parentNode.id,4)" type="button"   class="bi bi-pencil rounded float-end botonera" > GUARDAR  </button>
+                 <input type="text" placeholder="nombre">            
+                 <input type="date"><input type="date">
+                 <input type="text"placeholder="institucion">
+                            
+                  </div>
+                 
+                  <div id="hermano" class="parrafoseditables" style="display:none">
+                    <p id="1"></p>
+                    <p id="2"></p><p id="jj"></p>
+                    <p id="3"></p>
+                    
+              
+                     
+                  </div>
+
+            </div>
+           
+            
+            <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaredu',4)"></i></div>
+          </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+        
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+         <div class="proyectos container redaccion" id="proyectoss">
+            <h2 style="display:inline">Proyectos</h2> <p></p>
+           
+           
+            <div id="clonarproy" style="display:none" >
+               <button type="button"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+               <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+              
+               <div id="inputproyecto" class="inputeditable">
+                  <button onclick="guardar(this.parentNode.id,5)" type="button"   class="bi bi-pencil rounded float-end botonera" > GUARDAR  </button>
+
+                <input type="text" placeholder="nombre">            
+                <input type="date"><input type="date">
+                <input type="text"placeholder="descripcion" style="width: 80%"><br>            
+                <input type="text"placeholder="link">            
+                </div>
+
+                <div id="pproyecto" class="parrafoseditables" style="display:none">
+                <p></p>
+                <p></p><p></p>
+                <p></p>
+                <p></p>
+                </div>
+                
+               
+            </div>
+            <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarproy')"></i></div>
+            
+                               
+         </div>
+         <!--onclick="cambioidproyecto(this.previousElementSibling.id)"--> 
+<!--------------------------------------------------------------------------------------------------------------------------------------------> 
+ 
+ <!--------------------------------------------------------------------------------------------------------------------------------------------> 
+ <script>datePickerdesde.max = new Date().toISOString().split("T")[0];</script>
+ <script>datePickerhasta.max = new Date().toISOString().split("T")[0];</script>
+ 
+</body >   
+ 
+
+<script>
+
+
+
+function guardar(parametro,cantidad){
+   let parrafoss=document.getElementById(parametro).nextElementSibling
+  let hermano=document.getElementById(parametro).nextElementSibling.id
+  parrafoss.setAttribute("style", "display:inline")
+  
+
+  for(i=1,u=0;i<=cantidad;i++,u++){
+         document.getElementById(hermano).children[u].innerHTML= document.getElementById(parametro).children[i].value
+       }
+var idlocal=document.getElementById(parametro)
+parrafoss.setAttribute("style", "display:hide")
+idlocal.setAttribute("style", "display:none")
+
+
+
+
+  /*
+   let nombre = document.getElementById(parametro).children[1].value
+   let fechadesde = document.getElementById(parametro).children[2].value
+   let fechahasta = document.getElementById(parametro).children[3].value
+   let descrip = document.getElementById(parametro).children[4].value
+   //let empresa = document.getElementById(parametro).children[5].value
+   */
+   
+   /*document.getElementById(hermano).children[0].innerHTML=nombre
+   document.getElementById(hermano).children[1].innerHTML=fechadesde
+   document.getElementById(hermano).children[2].innerHTML=fechahasta
+   document.getElementById(hermano).children[3].innerHTML=descrip
+   document.getElementById(hermano).children[4].innerHTML=empresa*/
+}
+
+
+var n = 0
+function clonar(parametro, numero){
+    n++
+   let inputs= document.getElementById(parametro).children[2] 
+   let parrafos=document.getElementById(parametro).children[3] 
+  
+var clone = document.getElementById(parametro).cloneNode(true)
+   var posicion = document.getElementById(parametro);
+   //var inputs = document.getElementById(jefe);
+   //var parrafos =document.getElementById("hermano");
+   var id_padre = document.getElementById(parametro).parentNode;
+   id_padre.insertBefore(clone, posicion);
+   posicion.setAttribute("id","clonado"+n)
+   inputs.setAttribute("id","inputs"+n)
+   parrafos.setAttribute("id","parrafos"+n)
+
+   /* let parrafo1= parrafos.children[0]
+   let parrafo2= parrafos.children[1]
+   let parrafo3= parrafos.children[2]
+   let parrafo4= parrafos.children[3]
+   let parrafo5= parrafos.children[4]*/
+  
+  /* parrafo1.setAttribute("id","par1"+n)
+   parrafo2.setAttribute("id","par2"+n)
+   parrafo3.setAttribute("id","par3"+n)
+   parrafo4.setAttribute("id","par4"+n)
+   parrafo5.setAttribute("id","par5"+n)*/
+
+   for(i=0;i<numero;i++){parrafos.children[i].setAttribute("id","par"+i+n)}
+   
+   posicion.setAttribute("style","display:inline")
+
+}
+
+
+function borrar(parametro){
+   
+       var id_recibido = document.getElementById(parametro).remove()
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+//script para autosize de textarea
+        var textarea = document.querySelector('textarea');
+         textarea.addEventListener('keyup', autosize);
+         function autosize(){
+         var el = this;
+         setTimeout(function(){
+            el.style.cssText = 'height:auto; padding:0';
+            el.style.cssText = 'height:' + el.scrollHeight + 'px';
+         },0);
+         }
+
+         
+</script>
+
+</html>
