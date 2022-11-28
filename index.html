@@ -148,7 +148,7 @@
         <div id="clonarexp"  style="display:none""> 
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <button type="button" onclick="editar(this.nextElementSibling.id)" id="editar"   class="bi bi-pencil rounded float-end botonera"  >  </button>
-            <div id="jefe" class="inputeditable">
+            <div id="inputeditable2" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,5)" type="button"  id="vvv"  class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                 <input type="text" placeholder="Puesto" >    
                 <input type="text"placeholder="Empresa" style="width: 20%"> Desde        
@@ -156,7 +156,7 @@
                 <input type="text"placeholder="Descripcion" style="width: 80%">
             </div>
                  
-            <div id="hermano" class="parrafoseditables" style="display:none">
+            <div id="parrafosedit1" class="parrafoseditables" style="display:none">
                 Titulo: <p id="1" class="titulo"></p>
                 Empresa: <p id="2"class="fecha descripcion"></p>
                 Inicio:<p id="jj"class="fecha" ></p>
@@ -185,13 +185,13 @@
         <div id="clonaredu" style="display:none"> 
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <button type="button" onclick="editar(this.nextElementSibling.id)" class="bi bi-pencil rounded float-end botonera"  >  </button>
-            <div id="jefe" class="inputeditable">
+            <div id="inputeditable1" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,4)" type="button"   class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                  <input type="text" placeholder="Titulo/Carrera">
                  <input type="text"placeholder="Institucion" style="width: 20%">         
                  Desde<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">hasta<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
              </div>
-            <div id="hermano" class="parrafoseditables" style="display:none">
+            <div id="parrafosedit" class="parrafoseditables" style="display:none">
                   Titulo/Carrera:<p class="titulo"> </p>
                     Institucion: <p class="fecha descripcion"></p>
                     Inicio: <p class="fecha"></p>
@@ -297,7 +297,7 @@
             <div id="pproyecto" class="parrafoseditables" style="display:none">
                   Titulo:<p class="titulo"></p>
                   Inicio:<p class="fecha"></p>
-                  Fin:<p class="fecha" ></p>
+                  Fin:<p class="fecha descripcion" ></p>
                   Descripcion:<p class="fecha descripcion"></p>
                   Link: <p class="link"></p> 
             </div>
@@ -390,13 +390,13 @@ function borrar(parametro){
 function guardar(parametro,cantidad){
 
   let parrafoss=document.getElementById(parametro).nextElementSibling
-  let hermano=document.getElementById(parametro).nextElementSibling.id
+  let inputs=document.getElementById(parametro).nextElementSibling.id
   if(document.getElementById(parametro).children[1].value=="")
 {alert("Ingrese sus datos");}
 else{
 parrafoss.setAttribute("style", "display:inline")
    for(i=1,u=0;i<=cantidad;i++,u++){
-         document.getElementById(hermano).children[u].innerHTML= document.getElementById(parametro).children[i].value
+         document.getElementById(inputs).children[u].innerHTML= document.getElementById(parametro).children[i].value
        }
 var idlocal=document.getElementById(parametro)
 parrafoss.setAttribute("style", "display:hide")
@@ -456,6 +456,7 @@ function logout(){
    document.getElementById("botonLogout").style.display ="none";
    document.getElementById("botonLogin").style.display =""
 }
+
 
          
 </script>

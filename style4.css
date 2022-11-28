@@ -20,19 +20,6 @@ body{
 padding-top: 10px;
 object-fit: fill;
 }
-
-
-.modal-content, .modal-dialog{
-   background: radial-gradient(#58b46780, #64faff7e);
-   border: 1px solid  #d2b4de ;
-   max-width: 100%; 
-   word-wrap: break-word;
-   overflow: auto;
-   padding: 5px;
-   border-radius: 15px;
-   }
-  
-   #ip_inicial{ border-radius: 15px;}
    
 .presentacion{font-family: URW Chancery L, cursive;
 }
@@ -45,24 +32,17 @@ opacity: 1;}
 
 .editFotoPerfil input {
    display: none;}
-
-
-
    
 .Email form{
    padding: 1px;
    margin: 5px;}
-
- 
-      
-.fa-pencil {float: right;}
 
 .divPresentacion{
    border-radius: 15px;
    max-width: 100%; 
    overflow: auto;}
 
-.redaccion, .nuevo, .cajafooter {
+.redaccion{
    background: radial-gradient(#58b46780, #64faff7e);
    border: 2px solid  #d2b4de ;
    border-radius: 15px;
@@ -72,54 +52,23 @@ opacity: 1;}
    padding: 5px;
    margin: 10px}
 
-   #Edproyectos{display: none;}
-
-.boton_foo{margin: 5px;}
-
-.botonera, .nuevo .botonera{
+.botonera {
    color:rgb(76, 0, 255);
 background-color: #716fe969 ;
 opacity: 0.7;
 border-radius: 50%;
 display: inline;}
 
-.basurero, .nuevo .basurero{color:rgb(248, 6, 6);
+.basurero {color:rgb(248, 6, 6);
    background-color: #716fe969 ;
    opacity: 0.7;
    border-radius: 50%;
    display: inline;
    }
 
+ .progress{ margin: 5px;}
    
-
- #inputText{
-   border-radius: 15px;
-   height: 80px;}
-
-
-
-
-.progress{ margin: 5px;}
-
-
-
-.divsection a{font-size: 100%;}
-.divcopyright a{font-size: 100%;}
-     /* .divsection {background-color: blue; display: inline-flex; } */
-    /* .divcopyright {background-color: red;display: inline-flex;   } */
-
-textarea{  /*AUTOSIZE DE TEXTAREA*/
-   overflow:hidden, scroll;
-   padding:10px;
-   width:100%;
-   min-height: 70px;
-   
-   margin:20px auto;
-   display:block;
-   border-radius:10px;
-   resize: none;}
-   
-   .cargo, .empresa, .desde, .hasta{ padding-left:10px;
+.cargo, .empresa, .desde, .hasta{ padding-left:10px;
     border:2px solid #55667775;
     border-radius: 15px;
     resize: none;}
@@ -137,13 +86,13 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
 
    .parrafoseditables{
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     border:2px solid #55667775;
     border-radius: 15px;
     font-family:Arial, Helvetica, sans-serif;
     width: 85%; }
 
-   #hermano p{ font-weight: bold}
+
 
 .parrafoseditables p, #output_skill{ 
    text-transform:lowercase;
@@ -154,16 +103,11 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
 .parrafoseditables .titulo, #output_skill p::first-letter {
    text-transform: uppercase;
    display: block;}
-.parrafoseditables  .fecha{   display: inline-flex;}
-.parrafoseditables  .descripcion{display: block;}
+
+.fecha{   display: inline-flex;}
+
+.descripcion{display: block;}
 
 
 
-.redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion, #escritura {border:2px solid #55667775;
-border-radius: 15px;
-resize: none;  }
-
- .escritura{border:2px solid #55667775;
-   border-radius: 15px;
-   resize: none;
-width:100% }
+ 
