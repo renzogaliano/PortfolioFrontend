@@ -106,8 +106,6 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
   <div  class="acerca-de container redaccion " >
     <h2  >Acerca de mi </h2>
-    <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaracerca',1)"></i></div>
-
       <div id="clonaracerca" style="display:none"> 
        <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
        <button type="button" onclick="editar(this.nextElementSibling.id)" id="xxx"   class="bi bi-pencil rounded float-end botonera"  >  </button>
@@ -121,47 +119,57 @@
         <p id="para"></p>
        </div>
       </div>
+       <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaracerca',1)"></i></div>
     </div>
          
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-         <div class=" experiencia container redaccion " id="a" >   
-            <h2 >Experiencia</h2>           
-         <div style="text-align:center" id="segundo" >
-            <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarexp',5)"></i>
-         </div>
-           
-
-             <div id="clonarexp"  style="display:none""> 
-              
-               <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
-               <button type="button" onclick="editar(this.nextElementSibling.id)" id="editar"   class="bi bi-pencil rounded float-end botonera"  >  </button>
-               
-               <div id="jefe" class="inputeditable">
-                  <button onclick="guardar(this.parentNode.id,5)" type="button"  id="vvv"  class="bi bi-clipboard-check rounded float-end botonera" >  </button>
-                  <!--<img src="./fotomia.jpg"  class="rounded-circle imagenPerfil" width="50px"  >-->
-                  <input type="text" placeholder="Puesto" >    
-                 <input type="text"placeholder="Empresa" style="width: 20%"> Desde        
-                 <input type="text"  class="inputfecha" placeholder="dd/mm/aaaa">hasta<input type="text" class="inputfecha" placeholder="dd/mm/aaaa" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required/>
-                 <input type="text"placeholder="Descripcion" style="width: 80%">
+         <div class="experiencia container redaccion " id="a" > 
+            <h2 >Experiencia</h2>
+             <div  id="clonarexp" > 
+              <div class="row">
+               <div class="col-2" >
+                     <div style="background-color: red; width:50%; height:50%"></div>
                </div>
-                 
-                  <div id="hermano" class="parrafoseditables" style="display:none">
-                    Titulo: <p id="1" class="titulo"></p>
-                    Empresa: <p id="2"class="fecha"></p>
-                    Inicio:<p id="jj"class="fecha" ></p>
-                    -Fin:<p id="3"class="fecha"></p>
-                    Descripcion<p id="4"class="descripcion"></p>
-                   
+            
+               <div class="col-10">
+                  <div>
+                     <button onclick="borrar(this.parentNode.id)"  id="789" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+                     <button onclick="editar(this.parentNode.id)" type="button" id="xxx"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+                     <button onclick="guardar(this.parentNode.id)" id="save_exp"  name="'jefe','hermano',5" type="button"   class="bi bi-clipboard-check rounded float-end botonera" >  </button>
+      
                   </div>
-                  
-             </div>
+
+                  <div id="inp_exp" class="inputeditable">
+                  <input id="qq" type="text" placeholder="Puesto" oninput="javascript:this.nextElementSibling.innerHTML=this.value" >   
+                  <div ></div>
+                  <input  type="text"placeholder="Empresa" style="width: 20%" oninput="javascript:this.nextElementSibling.innerHTML=this.value" > 
+                  <div></div>Desde        
+                  <input  type="text"  class="inputfecha" placeholder="dd/mm/aaaa" style="display:inline-block" oninput="javascript:this.nextElementSibling.innerHTML=this.value">
+                  <div></div>hasta
+                  <input  type="text" class="inputfecha" placeholder="dd/mm/aaaa"  style="display:inline-block" oninput="javascript:this.nextElementSibling.innerHTML=this.value" >
+                  <div></div>
+                  <input  type="text"placeholder="Descripcion" style="width: 80%" oninput="javascript:this.nextElementSibling.innerHTML=this.value">
+                  <div></div>
+                  </div>
+                 
+                  <!--<div id="parr_exp" class="parrafoseditables" style="display:inline">
+                     Titulo:<div id="d" class="titulo"></div>
+                     Empresa:<div class="fecha"></div>
+                     Inicio:<div  class="fecha" ></div>
+                     Fin: <div  class="fecha"></div>
+                     Descripcion:<div  class="descripcion"></div>
+                  </div>-->
+               </div>
+                                               
+             </div></div>
               
+               <div style="text-align:center" id="segundo" >
+                  <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarexp')"></i>
+               </div>
          </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="educacion container redaccion " id="cuarto" >
             <h2 >Educación</h2> 
-            <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaredu',4)"></i></div>
-
             <div id="clonaredu" style="display:none"> 
                <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
                <button type="button" onclick="editar(this.nextElementSibling.id)" class="bi bi-pencil rounded float-end botonera"  >  </button>
@@ -178,12 +186,11 @@
                     Fin:<p class="fecha"></p>
              </div>
             </div>
+               <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaredu',4)"></i></div>
          </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
 <div class="skill container redaccion" id="skill">
    <h2 style=" display:inline">Skill</h2>
-   <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="habilitarskill()"></i></div>
-
    
    <div id="skilld"> 
       
@@ -215,7 +222,6 @@
 
    <div id="output_skill" style="display:none">
       <p id="id_pskill1">LIDERAZGO</p>
-
      <div class="progress ">
         <div id="id_skill1" class="progress-bar bg-success" role="progressbar"  style="width: 50%"  aria-valuemin="0" aria-valuemax="100"></div>
       </div>
@@ -232,12 +238,11 @@
      <div id="id_skill4" class="progress-bar bg-danger" role="progressbar" style="width: 100%"  aria-valuemin="0" aria-valuemax="100"> </div>
       </div>
    </div>
+   <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="habilitarskill()"></i></div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
          <div class="proyectos container redaccion" id="proyectoss">
-            <h2 style="display:inline">Proyectos</h2> 
-            <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarproy',5)"></i></div>
-            
+            <h2 style="display:inline">Proyectos</h2> <p></p>
               <div id="clonarproy" style="display:none" >
               <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
               <button type="button" onclick="editar(this.nextElementSibling.id)"  class="bi bi-pencil rounded float-end botonera"  >  </button>
@@ -258,6 +263,7 @@
                   LINK: <p class="link"></p> 
                 </div>
               </div>
+            <div style="text-align:center" id="segundo" ><i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarproy',5)"></i></div>
          </div>
          
 
@@ -268,13 +274,14 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
  
  <!--------------------------------------------------------------------------------------------------------------------------------------------> 
- <script>datePickerdesde.max = new Date().toISOString().split("T")[0];</script>
- <script>datePickerhasta.max = new Date().toISOString().split("T")[0];</script>
  
 </body >   
 
 
 <script>
+ ///<script>datePickerdesde.max = new Date().toISOString().split("T")[0];
+//<script>datePickerhasta.max = new Date().toISOString().split("T")[0];
+
 
 function previewFile() {
   const preview = document.querySelector('#fotoperfil');
@@ -312,11 +319,6 @@ document.getElementById("linkedin").setAttribute("href","www.linkedin.com/in/"+d
 
 function editar(parametro){
    
-   let boton_editar= document.getElementById(parametro).parentNode.children[1]
-   boton_editar.setAttribute("style","display:none")
-   let boton_guardar= document.getElementById(parametro).children[0]
-   boton_guardar.setAttribute("style","display:inline")
-
    let id_input=document.getElementById(parametro)
    let id_inpuat=document.getElementById(parametro).id
      let id_parr= document.getElementById(id_inpuat).nextElementSibling
@@ -325,37 +327,37 @@ function editar(parametro){
      
 }
 
+function ubicacion(parametro){
+   alert(parametro)
+}
 //---------------------------------------------------------------------------------------------------------------------------------
+ 
 
-
+let clonarexp= [5,256] 
+   
 var n = 0
-function clonar(parametro, numero){
-   n++
-   
+function clonar(parametro){
+ 
 
-   let botonEditar=document.getElementById(parametro).children[1]
-  botonEditar.style.display="none"
-    
-   let inputs= document.getElementById(parametro).children[2] 
-   let parrafos=document.getElementById(parametro).children[3] 
-  
-var clone = document.getElementById(parametro).cloneNode(true)
+
+      alert(parametro[0])
+
+
+
+
+    n++
+var boxclonado = document.getElementById(parametro).cloneNode(true)
    var posicion = document.getElementById(parametro);
-   
    var id_padre = document.getElementById(parametro).parentNode;
-   id_padre.insertBefore(clone, posicion);
+   id_padre.insertBefore(boxclonado, posicion);
+   posicion.setAttribute("id","clonado"+n);
    
-   posicion.setAttribute("id","clonado"+n)
-   inputs.setAttribute("id","inputs"+n)
-   parrafos.setAttribute("id","parrafos"+n)
+   //document.getElementById(parametro2).setAttribute("id","inp_clon"+n);
+  // document.getElementById(parametro3).setAttribute("id","parr_clon"+n);
 
-
-   for(i=0;i<numero;i++){parrafos.children[i].setAttribute("id","par"+i+n)}
-   
    posicion.setAttribute("style","display:inline")
 
 }
-
 //---------------------------------------------------------------------------------------------------------------------------------
 
 function borrar(parametro){
@@ -364,47 +366,18 @@ function borrar(parametro){
 
 //---------------------------------------------------------------------------------------------------------------------------------
 
-function guardar(parametro,cantidad){
-  
+function guardar(parametro,parametro2,numero){
+ 
+   for(u=0;u<numero;u++){
 
-  let parrafoss=document.getElementById(parametro).nextElementSibling
-  
-  let hermano=document.getElementById(parametro).nextElementSibling.id
-  
-  if(document.getElementById(parametro).children[1].value=="")
-{alert("Ingrese sus datos");}
-else{
+document.getElementById(parametro2).children[u].innerText=document.getElementById(parametro).children[u].value}
 
-parrafoss.setAttribute("style", "display:inline")
-   for(i=1,u=0;i<=cantidad;i++,u++){
-         document.getElementById(hermano).children[u].innerHTML= document.getElementById(parametro).children[i].value
-       }
-var idlocal=document.getElementById(parametro)
-parrafoss.setAttribute("style", "display:hide")
-idlocal.setAttribute("style", "display:none")
 
-let botonEditar=document.getElementById(parametro).parentNode.children[1]
-  botonEditar.setAttribute("style","display:inline")
-  
-  let botonguardar=document.getElementById(parametro).children[0]
-  botonguardar.setAttribute("style","display:none")}
+//document.getElementById(parametro).setAttribute("style", "display:none")
+//document.getElementById(parametro2).setAttribute("style", "display:inline")
+
 }
 
-
-
-  /*
-   let nombre = document.getElementById(parametro).children[1].value
-   let fechadesde = document.getElementById(parametro).children[2].value
-   let fechahasta = document.getElementById(parametro).children[3].value
-   let descrip = document.getElementById(parametro).children[4].value
-   //let empresa = document.getElementById(parametro).children[5].value
-   */
-   
-   /*document.getElementById(hermano).children[0].innerHTML=nombre
-   document.getElementById(hermano).children[1].innerHTML=fechadesde
-   document.getElementById(hermano).children[2].innerHTML=fechahasta
-   document.getElementById(hermano).children[3].innerHTML=descrip
-   document.getElementById(hermano).children[4].innerHTML=empresa*/
 
 //---------------------------------------------------------------------------------------------------------------------------------
 

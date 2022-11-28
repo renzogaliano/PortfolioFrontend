@@ -11,6 +11,8 @@ body{
 
 .colorfondo{
    background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
+   
+   background-color:#cecbf350;
    background-repeat: no-repeat;
    background-size: 300vh;
       border-radius: 15px;
@@ -44,7 +46,7 @@ opacity: 1;}
 .editFotoPerfil input {
    display: none;}
 
-#id_camera{display: none;}
+
 
    
 .Email form{
@@ -124,9 +126,13 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
    
    i {text-align:center}
 
-   .inputeditable{
-    
-    
+   .inputeditable input{
+      padding: 5px;
+      margin: 5px;
+   }
+
+ .inputfecha{
+      width: 110px;
    }
 
    .parrafoseditables{
@@ -134,15 +140,26 @@ textarea{  /*AUTOSIZE DE TEXTAREA*/
     margin: 5px;
     border:2px solid #55667775;
     border-radius: 15px;
-    font-family: URW Chancery L, cursive;
-    
-    
-   }
+    font-family:Arial, Helvetica, sans-serif;
+    width: 85%; }
 
-.parrafoseditables p{ text-transform:lowercase;}
-.parrafoseditables p::first-letter{text-transform:uppercase;}
+   #hermano p{ font-weight: bold}
 
- .redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion, #escritura {border:2px solid #55667775;
+.parrafoseditables p, #output_skill{ 
+   text-transform:lowercase;
+   margin: 5px;}
+.parrafoseditables p::first-letter{
+   text-transform:uppercase;}
+
+.parrafoseditables .titulo, #output_skill p::first-letter {
+   text-transform: uppercase;
+   display: block;}
+.parrafoseditables  .fecha{   display: inline-flex;}
+.parrafoseditables  .descripcion{display: block;}
+
+
+
+.redaccion textarea, #titulo, .nuevo textarea, #txtarea_presentacion, #escritura {border:2px solid #55667775;
 border-radius: 15px;
 resize: none;  }
 
