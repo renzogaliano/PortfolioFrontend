@@ -1,0 +1,121 @@
+
+
+body{
+    background-color:  #cecbf350; 
+    border:2px solid rgb(12, 10, 0);
+    background: radial-gradient(#58b46780, #64faff7e);
+   padding: 5px 5px;
+   border-radius: 15px;}
+/*Si a box sizing le das border box eso asegura que todo quede contenido dentro de la caja contenedora del elemento*/
+   *{box-sizing: border-box;}
+
+.colorfondo{
+   background-image:url(https://image.shutterstock.com/image-illustration/medical-health-blue-green-cross-260nw-1747319153.jpg) ;
+   
+   background-color:#cecbf350;
+   background-repeat: no-repeat;
+   background-size: 300vh;
+      border-radius: 15px;
+   padding-bottom: 5px;
+padding-top: 10px;
+object-fit: fill;
+}
+   
+.presentacion{font-family: URW Chancery L, cursive;
+}
+
+.editFotoPerfil i{
+transform: translate(120px, -40px);
+font-size: 30px;
+color: rgb(159, 158, 165);
+opacity: 1;}
+
+.editFotoPerfil input {
+   display: none;}
+   
+.Email form{
+   padding: 1px;
+   margin: 5px;}
+
+.divPresentacion{
+   border-radius: 15px;
+   max-width: 100%; 
+   overflow: auto;}
+
+.redaccion{
+   background: radial-gradient(#58b46780, #64faff7e);
+   border: 2px solid  #d2b4de ;
+   border-radius: 15px;
+   max-width: 100%; 
+   word-wrap: break-word;
+   overflow: auto;
+   padding: 5px;
+   margin: 10px}
+
+.botonera {
+   color:rgb(76, 0, 255);
+background-color: #716fe969 ;
+opacity: 0.7;
+border-radius: 50%;
+display: inline;}
+
+.basurero {color:rgb(248, 6, 6);
+   background-color: #716fe969 ;
+   opacity: 0.7;
+   border-radius: 50%;
+   display: inline;
+   }
+
+ .progress{ margin: 5px;}
+   
+.cargo, .empresa, .desde, .hasta{ padding-left:10px;
+    border:2px solid #55667775;
+    border-radius: 15px;
+    resize: none;}
+   
+   i {text-align:center}
+
+   .inputeditable input{
+      padding: 5px;
+      margin: 5px;
+   }
+
+.inputeditable{
+   display: block;
+   margin: 10px;
+}
+
+.parrafoseditables{
+    padding: 5px;
+    padding-left: 10px;
+    margin: 10px;
+    border:2px solid #55667775;
+    border-radius: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 85%;
+   }
+
+.parrafoseditables p, #output_skill{ 
+   text-transform:lowercase;
+   margin: 5px;
+   }
+
+.parrafoseditables p::first-letter{
+   text-transform:uppercase;}
+.parrafoseditables .titulo, #output_skill p::first-letter {
+   text-transform: uppercase;
+   }
+.parrafoseditables .fecha{ display: inline-flex;
+      }
+.parrafoseditables .fecha2{ display:  inline-flex;
+         }
+.descripcion{display: block;
+   }
+
+.parrafoseditables .titulo{display: block;
+   }
+
+.inputfecha{
+   width: 110px;
+   display: inline-flex;
+}
