@@ -74,7 +74,7 @@
                   <input id="id_instagram" type="text" placeholder="Username Instagram">
                   <input id="id_twitter" type="text" placeholder="Username Twitter">
                   <input id="id_linkedin" type="text" placeholder="Username Linkedin">
-                  <button type="button" onclick="guardarPresentacion()" class="bi bi-pencil botonera "  >  </button>
+                  <button type="button" onclick="guardarPresentacion()" class="bi bi-clipboard-check botonera "  >  </button>
                 </div>
                   
                 <div id="edicionoutput">
@@ -109,7 +109,7 @@
 
     <div class="parrafoseditables" id="demo1" >
         <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
-        <p  >Soy un farmaceutico, que tuvo siempre un gran  gusto por la informatica, planillas excel, etc,
+        <p class="par" >Soy un farmaceutico, que tuvo siempre un gran  gusto por la informatica, planillas excel, etc,
          y que gracias a un programa nacional, se decidio a estudiar programacion</p>
     </div>
       
@@ -120,7 +120,7 @@
      
        <div id="inputacerca"  class="inputeditable" >
          <button onclick="guardar(this.parentNode.id,1)" type="button" class="bi bi-clipboard-check rounded float-end botonera" >   </button>
-         <input type="text" placeholder="Descripcion" style="width: 80%">            
+         <input type="text" placeholder="Descripcion" style="width: 85%">            
        </div>
 
        <div id="pacerca" class="parrafoseditables" style="display:none">
@@ -141,28 +141,29 @@
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
             Titulo/Cargo:<p  class="titulo">Programador Full Stack Jr</p>
             Empresa:<p class="fecha descripcion"> Argentina Programa</p>
+            Descripcion:<p class="descripcion">Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
             Inicio:<p class="fecha" >28/06/2022</p>
             Fin:<p class="fecha">15/01/2023</p>
-            :<p class="descripcion">Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
         </div>
         <div id="clonarexp"  style="display:none""> 
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <button type="button" onclick="editar(this.nextElementSibling.id)" id="editar"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+            
             <div id="inputeditable2" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,5)" type="button"  id="vvv"  class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                 <input type="text" placeholder="Puesto" >    
-                <input type="text"placeholder="Empresa" style="width: 20%"> Desde        
-                <input type="text"  class="inputfecha" placeholder="dd/mm/aaaa">hasta<input type="text" class="inputfecha" placeholder="dd/mm/aaaa" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required/>
-                <input type="text"placeholder="Descripcion" style="width: 80%">
+                <input type="text"placeholder="Empresa" style="width: 20%">         
+                <input type="text"  class="descripcion" placeholder="Descripcion"   style="width: 85%">
+                <input type="text"  class="inputfecha" placeholder="dd/mm/aaaa">
+                <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
             </div>
                  
             <div id="parrafosedit1" class="parrafoseditables" style="display:none">
-                Titulo: <p id="1" class="titulo"></p>
+                Titulo: <p id="tituloexp" class="titulo"></p>
                 Empresa: <p id="2"class="fecha descripcion"></p>
-                Inicio:<p id="jj"class="fecha" ></p>
-                Fin:<p id="3"class="fecha descripcion"></p>
                 Descripcion:<p id="4"class=""></p>
-                   
+                Inicio:<p id="jj"class="fecha" ></p>
+                Fin:<p id="3"class="fecha2 "></p>   
             </div>
         </div>
               
@@ -188,13 +189,14 @@
             <div id="inputeditable1" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,4)" type="button"   class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                  <input type="text" placeholder="Titulo/Carrera">
-                 <input type="text"placeholder="Institucion" style="width: 20%">         
-                 Desde<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">hasta<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
+                 <input type="text"placeholder="Institucion" style="width: 30%">         
+                 Desde<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">hasta
+                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
              </div>
             <div id="parrafosedit" class="parrafoseditables" style="display:none">
-                  Titulo/Carrera:<p class="titulo"> </p>
-                    Institucion: <p class="fecha descripcion"></p>
-                    Inicio: <p class="fecha"></p>
+                  Titulo/Carrera:<p class="titulo"></p>
+                    Institucion:<p class="fecha descripcion"></p>
+                    Inicio:<p class="fecha"></p>
                     Fin:<p class="fecha"></p>
             </div>
         </div>
@@ -275,10 +277,10 @@
         <div class="parrafoseditables" id="demo4" >
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
               Titulo:<p  class="titulo">Mi Portfolio personal</p>
-              Inicio:<p class="fecha" >28/06/2022</p>
-              Fin:<p class="fecha">15/01/2023</p><br>
               Descripcion:<p class="fecha descripcion"> Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
               Link:<p class=""> HTTPs://www.miport...com.ar</p>
+              Inicio:<p class="fecha" >28/06/2022</p>
+              Fin:<p class="fecha">15/01/2023</p>
         </div>
 
         <div id="clonarproy" style="display:none" >
@@ -288,18 +290,19 @@
             <div id="inputproyecto" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,5)" type="button"   class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                 <input type="text" placeholder="Nombre/Titulo">            
+                <input type="text" placeholder="Descripcion" style="width: 85%">            
+                <input  type="text" placeholder="Link"style="width: 30%">            
                 Desde <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
                 hasta<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
-                <input type="text"placeholder="Descripcion" style="width: 80%">            
-                <input type="text"placeholder="Link"style="width: 30%">            
+
             </div>
 
             <div id="pproyecto" class="parrafoseditables" style="display:none">
                   Titulo:<p class="titulo"></p>
-                  Inicio:<p class="fecha"></p>
-                  Fin:<p class="fecha descripcion" ></p>
-                  Descripcion:<p class="fecha descripcion"></p>
+                  Descripcion:<p class=" descripcion"></p>
                   Link: <p class="link"></p> 
+                  Inicio:<p class="fecha"></p>
+                  Fin:<p class="fecha " ></p>
             </div>
         </div>
     </div>

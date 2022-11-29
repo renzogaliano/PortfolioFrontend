@@ -80,34 +80,42 @@ display: inline;}
       margin: 5px;
    }
 
- .inputfecha{
-      width: 110px;
-   }
+.inputeditable{
+   display: block;
+   margin: 10px;
+}
 
-   .parrafoseditables{
+.parrafoseditables{
     padding: 5px;
+    padding-left: 10px;
     margin: 10px;
     border:2px solid #55667775;
     border-radius: 15px;
     font-family:Arial, Helvetica, sans-serif;
-    width: 85%; }
-
-
+    width: 85%;
+   }
 
 .parrafoseditables p, #output_skill{ 
    text-transform:lowercase;
-   margin: 5px;}
+   margin: 5px;
+   }
+
 .parrafoseditables p::first-letter{
    text-transform:uppercase;}
-
 .parrafoseditables .titulo, #output_skill p::first-letter {
    text-transform: uppercase;
-   display: block;}
+   }
+.parrafoseditables .fecha{ display: inline-flex;
+      }
+.parrafoseditables .fecha2{ display:  inline-flex;
+         }
+.descripcion{display: block;
+   }
 
-.fecha{   display: inline-flex;}
+.parrafoseditables .titulo{display: block;
+   }
 
-.descripcion{display: block;}
-
-
-
- 
+.inputfecha{
+   width: 110px;
+   display: inline-flex;
+}
