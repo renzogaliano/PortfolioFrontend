@@ -16,7 +16,7 @@
 <body  >
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-<div class="container colorfondo">
+<div class="container-sm colorfondo">
     <div class="container contenedor1" >
       <div class="container contenedor1" >
          <div class="row justify-content-between contenedor1 "  >
@@ -32,7 +32,7 @@
       </div>
           
        <!--cuerpo del email-->
-     <div class="container Email" id="bodyMail" >
+     <div class="container-sm  Email" id="bodyMail" >
       <div class="row justify-content-center">
         <div class="col col-sm-4 ">
           <div id="formularioEmail" style="display: none; align-self: center;" >
@@ -51,7 +51,7 @@
     </div>
      <!--cuerpo de perfil-->
      
-     <div class="container" >
+     <div class="container-sm" >
        <div class="row "  >
         <div class="col " >
          <div class="row" >
@@ -101,20 +101,20 @@
 </div>
       
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-  <div  class="acerca-de container redaccion " >
+  <div  class="acerca-de container-sm redaccion " >
     <h2  >Acerca de mi </h2>
     <div style="text-align:center" id="segundo" >
         <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaracerca',1)"></i>
     </div>
 
-    <div class="parrafoseditables" id="demo1" >
+    <div class="parrafoseditables container" id="demo1" >
         <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
         <p class="par" >Soy un farmaceutico, que tuvo siempre un gran  gusto por la informatica, planillas excel, etc,
          y que gracias a un programa nacional, se decidio a estudiar programacion</p>
     </div>
       
 
-    <div id="clonaracerca" style="display:none"> 
+    <div class="" id="clonaracerca" style="display:none"> 
        <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
        <button type="button" onclick="editar(this.nextElementSibling.id)" id="xxx"   class="bi bi-pencil rounded float-end botonera"  >  </button>
      
@@ -130,14 +130,14 @@
     </div>
          
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-    <div class=" experiencia container redaccion " id="a" >   
+    <div class=" experiencia container-sm redaccion " id="a" >   
         <h2 >Experiencia</h2>      
             
         <div style="text-align:center" id="segundo" >
             <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarexp',5)"></i>
         </div>
             
-        <div class="parrafoseditables" id="demo2" >
+        <div class="parrafoseditables container" id="demo2" >
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
             Titulo/Cargo:<p  class="titulo">Programador Full Stack Jr</p>
             Empresa:<p class="fecha descripcion"> Argentina Programa</p>
@@ -145,14 +145,14 @@
             Inicio:<p class="fecha" >28/06/2022</p>
             Fin:<p class="fecha">15/01/2023</p>
         </div>
-        <div id="clonarexp"  style="display:none""> 
+        <div class="" id="clonarexp"  style="display:none""> 
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <button type="button" onclick="editar(this.nextElementSibling.id)" id="editar"   class="bi bi-pencil rounded float-end botonera"  >  </button>
             
             <div id="inputeditable2" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,5)" type="button"  id="vvv"  class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                 <input type="text" placeholder="Puesto" >    
-                <input type="text"placeholder="Empresa" style="width: 20%">         
+                <input type="text"placeholder="Empresa">         
                 <input type="text"  class="descripcion" placeholder="Descripcion"   style="width: 85%">
                 <input type="text"  class="inputfecha" placeholder="dd/mm/aaaa">
                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
@@ -160,7 +160,7 @@
                  
             <div id="parrafosedit1" class="parrafoseditables" style="display:none">
                 Titulo: <p id="tituloexp" class="titulo"></p>
-                Empresa: <p id="2"class="fecha descripcion"></p>
+                Empresa: <p id="2"class=" descripcion"></p>
                 Descripcion:<p id="4"class=""></p>
                 Inicio:<p id="jj"class="fecha" ></p>
                 Fin:<p id="3"class="fecha2 "></p>   
@@ -169,7 +169,7 @@
               
     </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-    <div class="educacion container redaccion " id="cuarto" >
+    <div class="educacion container-sm redaccion " id="cuarto" >
         <h2 >Educación</h2> 
         <div style="text-align:center" id="segundo" >
             <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaredu',4)"></i>
@@ -189,8 +189,8 @@
             <div id="inputeditable1" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,4)" type="button"   class="bi bi-clipboard-check rounded float-end botonera" >  </button>
                  <input type="text" placeholder="Titulo/Carrera">
-                 <input type="text"placeholder="Institucion" style="width: 30%">         
-                 Desde<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">hasta
+                 <input type="text"placeholder="Institucion" >         
+                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
                  <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
              </div>
             <div id="parrafosedit" class="parrafoseditables" style="display:none">
@@ -202,45 +202,37 @@
         </div>
     </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-    <div class="skill container redaccion" id="skill">
+    <div class="skill container-sm redaccion" id="skill">
         <h2 style=" display:inline">Skill</h2>
         <div style="text-align:center" id="segundo" >
             <i type="button" class="bi bi-plus-circle botonplus" onclick="habilitarskill()"></i>
         </div>
   
-        <div id="skilld"> 
-           <p id="texto_a_modificar4"> </p>
-        </div>
-
         <div id="input_skill"  style=" display:none" > 
         <button onclick="borrarskill()" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
         <button type="button" onclick="skill()" class="bi bi-clipboard-check rounded float-end botonera"  >  </button>
      
-        <div class="tablaskill  ">
-            <div>
-                skill #1 
-                <input id="skill1" type="text" value="empatia"> %
+        <div class="tablaskill   ">
+            <div >
+                <input id="skill1" type="text" value="empatia" placeholder="skill 1"> %
                 <input  type="number" class="inputfecha" id="Skill1" max="100"  maxlength="2" value="10"
                 oninput="javascript:if (this.value.length > this.maxLength&&this.value>100||this.value<0){
                 alert('Fuera del limite 0 - 100%');this.value = this.value.slice(0, this.maxLength)} " >
             </div>
             <div>
-                skill #2 
-                <input id="skill2" type="text" value="compañerismo"> % 
+                <input id="skill2" type="text" value="compañerismo" placeholder="skill 2"> % 
                 <input type="number" class="inputfecha" id="Skill2" max="100"  maxlength="2" value="25"
                 oninput="javascript:if (this.value.length > this.maxLength&&this.value>100||this.value<0){
                 alert('Fuera del limite 0 - 100%');this.value = this.value.slice(0, this.maxLength)} " >
             </div>
             <div>
-                skill #3 
-                <input id="skill3" type="text" value="simpatia"> % 
+                <input id="skill3" type="text" value="simpatia" placeholder="skill 3"> % 
                 <input type="number" class="inputfecha" id="Skill3" max="100"  maxlength="2" value="50"
                 oninput="javascript:if (this.value.length > this.maxLength&&this.value>100||this.value<0){
                 alert('Fuera del limite 0 - 100%');this.value = this.value.slice(0, this.maxLength)} " >
             </div>
             <div>
-                skill #4 
-                <input id="skill4" type="text" value="colaboracion"> % 
+                <input id="skill4" type="text" value="colaboracion" placeholder="skill 4"> % 
                 <input type="number" class="inputfecha" id="Skill4" max="100"  maxlength="2" value="75"
                 oninput="javascript:if (this.value.length > this.maxLength&&this.value>100||this.value<0){
                 alert('Fuera del limite 0 - 100%');this.value = this.value.slice(0, this.maxLength)} " >
@@ -268,7 +260,7 @@
     </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
-    <div class="proyectos container redaccion" id="proyectoss">
+    <div class="proyectos container-sm redaccion" id="proyectoss">
         <h2 style="display:inline">Proyectos</h2> 
         <div style="text-align:center" id="segundo" >
             <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarproy',5)"></i>
@@ -283,7 +275,7 @@
               Fin:<p class="fecha">15/01/2023</p>
         </div>
 
-        <div id="clonarproy" style="display:none" >
+        <div  id="clonarproy" style="display:none" >
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
             <button type="button" onclick="editar(this.nextElementSibling.id)"  class="bi bi-pencil rounded float-end botonera"  >  </button>
               
@@ -292,8 +284,8 @@
                 <input type="text" placeholder="Nombre/Titulo">            
                 <input type="text" placeholder="Descripcion" style="width: 85%">            
                 <input  type="text" placeholder="Link"style="width: 30%">            
-                Desde <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
-                hasta<input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
+                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
+                <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
 
             </div>
 
