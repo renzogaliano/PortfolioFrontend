@@ -1,5 +1,4 @@
 
-
 body{
     background-color:  #cecbf350; 
     border:2px solid rgb(12, 10, 0);
@@ -14,17 +13,22 @@ body{
    background-color:#cecbf350;
    background-repeat: no-repeat;
    background-size: 300vh;
-      border-radius: 15px;
+   border-radius: 15px;
    padding-bottom: 5px;
-padding-top: 10px;
-object-fit: fill;
+   padding-top: 10px;
+   object-fit: fill;
 }
    
-.presentacion{font-family: URW Chancery L, cursive;
+.presentacion{
+   font-family: URW Chancery L, cursive;
+}
+
+#fotoperfil{
+   transform: translate(0px, 35px);
 }
 
 .editFotoPerfil i{
-transform: translate(120px, -40px);
+transform: translate(170px, -10px);
 font-size: 30px;
 color: rgb(159, 158, 165);
 opacity: 1;}
@@ -39,7 +43,8 @@ opacity: 1;}
 .divPresentacion{
    border-radius: 15px;
    max-width: 100%; 
-   overflow: auto;}
+   overflow: auto;
+}
 
 .redaccion{
    background: radial-gradient(#58b46780, #64faff7e);
@@ -72,7 +77,7 @@ display: inline;}
     border-radius: 15px;
     resize: none;}
    
-   i {text-align:center}
+   
 
    .inputeditable input{
       padding: 5px;
@@ -104,17 +109,19 @@ display: inline;}
 .parrafoseditables .titulo, #output_skill p::first-letter {
    text-transform: uppercase;
    }
-.parrafoseditables .fecha{ display: inline-flex;
+.parrafoseditables .fecha, .fecha2 { display: inline-flex;
       }
-.parrafoseditables .fecha2{ display:  inline-flex;
-         }
-.descripcion{display: block;
+
+.parrafoseditables .descripcion{display: block;
+   
    }
+.inputeditable .descexp {min-width: 85%;display: block;}
 
 .parrafoseditables .titulo{display: block;
    }
-
 .inputfecha{
    width: 110px;
    display: inline-flex;
 }
+
+

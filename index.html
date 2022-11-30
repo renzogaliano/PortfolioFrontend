@@ -17,17 +17,21 @@
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------> 
 <div class="container-sm colorfondo">
-    <div class="container contenedor1" >
-      <div class="container contenedor1" >
-         <div class="row justify-content-between contenedor1 "  >
-         <div class="col-4 col-sm-2 iconos align-self-center"  >
-            <img  src="APLogo-20-20.png"  alt="foto de cabecera"   style="max-width: 100%;"  >
-         </div>
+    <div class="container " >
+      <div class="container " >
+        <div class="row justify-content-between contenedor1 "  >
+            <div class="col-6 col-sm-2 iconos align-self-center"  >
+                <img  src="APLogo-20-20.png"  alt="foto de cabecera"   style="max-width: 100%;"  >
+            </div>
      
-        <div class="col-8 iconos align-self-center"   >
-            <button type="button" id="botonLogin" class="btn btn-dark rounded float-end"  onclick="login()"><i class="bi bi-person-circle"> LOGIN</i></button>
-            <button type="button" id="botonLogout" class="btn btn-dark rounded float-end" style="display: none;"  onclick="logout()"><i class="bi bi-key"> LOGUOT</i></button>
-        </div> 
+            <div class="col-6 iconos align-self-center"   >
+                <button type="button" id="botonLogin" class="btn btn-dark rounded float-end"  onclick="login()">
+                    <i class="bi bi-person-circle">LOGIN</i>
+                </button>
+                <button type="button" id="botonLogout" class="btn btn-dark rounded float-end" style="display: none;"  onclick="logout()">
+                    <i class="bi bi-key">LOGUOT</i>
+                </button>
+            </div> 
         </div>
       </div>
           
@@ -74,20 +78,22 @@
                   <input id="id_instagram" type="text" placeholder="Username Instagram">
                   <input id="id_twitter" type="text" placeholder="Username Twitter">
                   <input id="id_linkedin" type="text" placeholder="Username Linkedin">
-                  <button type="button" onclick="guardarPresentacion()" class="bi bi-clipboard-check botonera "  >  </button>
+                  <button type="button" onclick="guardarPresentacion()" class="bi bi-clipboard-check botonera ">  </button>
                 </div>
                   
-                <div id="edicionoutput">
-                     <button type="button" onclick="editarPresentacion()" class="bi bi-pencil botonera "  >  </button>
+                <div class="parrafopresentacion" id="edicionoutput">
+                     
                      <p id="nombre">Renzo Galiano</p>
                      <p id="tituloinfo">Programador Full Stack Junior</p>
                      <p id="edad">35 años</p>
                      <p id="Prov"> Santa Fe, Argentina</p>
+                    
                     <div style="font-size: 20px;"> 
                         <a href="" id="facebook" target="_blank" style="color: black"><i  class="bi bi-facebook" ></i></a>
                         <a href="" id="instagram" target="_blank" style="color: black"<i  class="bi bi-instagram"></i></a>
                         <a href="" id="twitter" target="_blank" style="color: black"><i class="bi bi-twitter"></i></a>
                         <a href="" id="linkedin" target="_blank" style="color: black"><i  class="bi bi-linkedin" ></i></a>
+                        <button type="button" onclick="editarPresentacion()" class="bi bi-pencil botonera " style="transform: translate(100%, 0px);" ></button>
                     </div>
                 </div>
                </div>
@@ -120,7 +126,7 @@
      
        <div id="inputacerca"  class="inputeditable" >
          <button onclick="guardar(this.parentNode.id,1)" type="button" class="bi bi-clipboard-check rounded float-end botonera" ></button>
-         <input type="text" placeholder="Descripcion" style="width: 85%">            
+         <input type="text" class="descexp" placeholder="Descripcion" >            
        </div>
 
        <div id="pacerca" class="parrafoseditables" style="display:none">
@@ -140,7 +146,7 @@
         <div class="parrafoseditables " id="demo2" >
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
             Titulo/Cargo:<p  class="titulo">Programador Full Stack Jr</p>
-            Empresa:<p class="fecha descripcion"> Argentina Programa</p><br>
+            Empresa:<br><p class="fecha descripcion"> Argentina Programa</p>
             Descripcion:<p class="descripcion">Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
             <p class="fecha" >28/06/2022</p>
             -<p class="fecha">15/01/2023</p>
@@ -154,14 +160,14 @@
                 <button onclick="guardar(this.parentNode.id,5)" type="button"  id="vvv"  class="bi bi-clipboard-check rounded float-end botonera" ></button>
                 <input type="text" placeholder="Puesto" >    
                 <input type="text"placeholder="Empresa" >         
-                <input type="text"  class="descripcion" placeholder="Descripcion"   style="width: 85%">
+                <input type="text"  class="descexp" placeholder="Descripcion"   >
                 <input type="text"  class="inputfecha" placeholder="dd/mm/aaaa">
                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
             </div>
                  
             <div id="parrafosedit1" class="parrafoseditables" style="display:none">
-                Titulo: <p id="tituloexp" class="titulo"></p>
-                Empresa: <p id="2"class="descripcion"></p>
+                Titulo/Cargo:<p id="tituloexp" class="titulo"></p>
+                Empresa:<p id="2"class="descripcion"></p>
                 Descripcion:<p id="4"class=""></p>
                 <p id="jj"class="fecha" ></p>-
                 <p id="3"class="fecha2 "></p>   
@@ -179,7 +185,7 @@
         <div class="parrafoseditables" id="demo3" >
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
             Titulo/Carrera:<p  class="titulo">Programador Full Stack Jr</p>
-            Institucion:<p class="fecha descripcion"> Argentina Programa</p><br>
+            Institucion:<p class="fecha descripcion"> Argentina Programa</p>
             <p class="fecha" >28/06/2022</p>
             -<p class="fecha">15/01/2023</p>
         </div>
@@ -270,7 +276,7 @@
         <div class="parrafoseditables" id="demo4" >
             <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
               Titulo:<p  class="titulo">Mi Portfolio personal</p>
-              Descripcion:<p class="fecha descripcion"> Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p><br>
+              Descripcion:<p class="fecha descripcion"> Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
               Link:<p class=""> HTTPs://www.miport...com.ar</p>
               <p class="fecha" >28/06/2022</p>
               -<p class="fecha">15/01/2023</p>
@@ -283,7 +289,7 @@
             <div id="inputproyecto" class="inputeditable">
                 <button onclick="guardar(this.parentNode.id,5)" type="button"   class="bi bi-clipboard-check rounded float-end botonera" ></button>
                 <input type="text" placeholder="Nombre/Titulo">            
-                <input type="text" placeholder="Descripcion" style="width: 85%">            
+                <input type="text" class="descexp" placeholder="Descripcion" >            
                 <input  type="text" placeholder="Link">            
                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
                 <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
