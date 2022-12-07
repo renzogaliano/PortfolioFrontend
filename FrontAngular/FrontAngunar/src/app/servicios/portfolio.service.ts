@@ -6,11 +6,11 @@ import {Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class PortfolioService {
-
+  miPortfolio:any;
   constructor(private http:HttpClient) {}
 
   obtenerDatos():Observable<any>
-  {return this.http.get('./assets/data/DataTransfer.json')
+  {return this.http.get('./assets/data/data.json')
       //console.log("el service portfolio esta corriendo")
     }
 

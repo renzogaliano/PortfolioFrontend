@@ -116,6 +116,7 @@ display: inline;}
     }
 
 .parrafoseditables .descripcion{display: block;
+  text-transform: capitalize;
 
  }
 .inputeditable .descexp {min-width: 85%;display: block;}

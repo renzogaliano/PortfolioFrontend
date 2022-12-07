@@ -4,12 +4,16 @@
       <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaredu',4)"></i>
   </div>
 
-  <div class="parrafoseditables" id="demo3" >
+  <div class="parrafoseditables" id="demo3" *ngFor="let educacion of mieducacion">
       <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
-      Titulo/Carrera:<p  class="titulo">Programador Full Stack Jr</p>
-      Institucion:<p class="fecha descripcion"> Argentina Programa</p>
-      <p class="fecha" >28/06/2022</p>
-      -<p class="fecha">15/01/2023</p>
+
+        Titulo/Carrera:<p  class="titulo">{{educacion.title}}</p>
+        Institucion:<p class="fecha descripcion"> {{educacion.school}} </p>
+        <p class="fecha" >{{educacion.start}}</p>
+        -<p class="fecha">{{educacion.end}}</p>
+
+
+
   </div>
 
   <div id="clonaredu" style="display:none">

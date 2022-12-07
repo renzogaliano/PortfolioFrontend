@@ -4,13 +4,13 @@
       <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarproy',5)"></i>
   </div>
 
-  <div class="parrafoseditables" id="demo4" >
+  <div class="parrafoseditables" id="demo4" *ngFor="let proyecto of miproyecto" >
       <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
-        Titulo:<p  class="titulo">Mi Portfolio personal</p>
-        Descripcion:<p class="fecha descripcion"> Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
-        Link:<p class=""> HTTPs://www.miport...com.ar</p>
-        <p class="fecha" >28/06/2022</p>
-        -<p class="fecha">15/01/2023</p>
+        Titulo:<p  class="titulo">{{proyecto.title}} </p>
+        Descripcion:<p class="fecha descripcion">{{proyecto.description}} </p>
+        Link:<p class=""> {{proyecto.link}}</p>
+        <p class="fecha" >{{proyecto.start}}</p>
+        -<p class="fecha">{{proyecto.end}}</p>
   </div>
 
   <div  id="clonarproy" style="display:none" >

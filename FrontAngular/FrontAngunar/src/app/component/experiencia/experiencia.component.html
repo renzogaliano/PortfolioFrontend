@@ -5,13 +5,15 @@
       <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarexp',5)"></i>
   </div>
 
-  <div class="parrafoseditables " id="demo2" >
+  <div class="parrafoseditables " id="demo2" *ngFor="let experiencia of miexperiencia">
       <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
-      Titulo/Cargo:<p  class="titulo">Programador Full Stack Jr</p>
-      Empresa:<br><p class="fecha descripcion"> Argentina Programa</p>
-      Descripcion:<p class="descripcion">Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
-      <p class="fecha" >28/06/2022</p>
-      -<p class="fecha">15/01/2023</p>
+
+      Titulo/Cargo:<p  class="titulo">{{experiencia.position}}</p>
+      Empresa:<br><p class="fecha descripcion"> {{experiencia.company}} </p>
+      Descripcion:<p class="descripcion">{{experiencia.descripcion}} </p>
+      <p class="fecha" >{{experiencia.start}}</p>
+      -<p class="fecha">{{experiencia.end}}</p><br>
+
   </div>
 
   <div class="" id="clonarexp"  style="display:none">

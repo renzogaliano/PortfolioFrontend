@@ -7,29 +7,56 @@
   "school":{},
   "ubication":"Santa Fe, Argentina",
   "about":"Programador Full Stack Junior",
-  "acerca_de_mi":"Soy Farmaceutico y estoy dando los primero pasos en programación",
+  "acerca_de_mi":"Soy un farmaceutico, que tuvo siempre un gran  gusto por la informatica, planillas excel, etc,y que gracias a un programa nacional, se decidio a estudiar programacion",
   "experiencia":[
+    {
+      "position":"Farmaceutico",
+      "company":"Sanatorio Esperanza",
+      "description":"encargado general",
+      "start":"2020",
+      "end":"2021"},
     {
     "position":"Farmaceutico",
     "company":"Farmacia de la Plaza",
+    "description":"encargado general",
     "start":"2019",
-    "end":"2020"},
-    {
-    "position":"Farmaceutico",
-    "company":"Sanatorio Esperanza",
-    "start":"2020",
-    "end":"2021"}],
+    "end":"2020"}
+    ],
 
     "educacion":[
     {
       "school":"Universidad Nacional de Rosario",
       "title":"Farmaceutico",
       "img":"",
-      "career":"Farmacia",
-      "start":"2010",
-      "end":"2013"
+      "start":"01/01/2010",
+      "end":"01/12/2013"
+    },
+    {
+      "school":"Argentina Programa",
+      "title":"Programador Full Stack",
+      "img":"",
+      "start":"01/05/2022",
+      "end":"01/12/2023"
     }],
-  "aptitudes":""
+"proyectos":[{
+  "title":"Portfolio",
+  "description":"Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online",
+  "link":"https://renzogaliano.github.io/frontend",
+  "start":"01/05/2022",
+  "end":"01/12/2023"}
+],
+"skill":[{
+  "skill1":"empatia",
+  "skill2":"compañerismo",
+  "skill3":"simpatia",
+  "skill4":"colaboracion",
+  "skill1%":"10",
+  "skill2%":"25",
+  "skill3%":"50",
+  "skill4%":"75"}
+]
+
+
 
 
 
