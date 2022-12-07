@@ -1,0 +1,39 @@
+<div class="proyectos container-sm  redaccion" id="proyectoss">
+  <h2 style="display:inline">Proyectos</h2>
+  <div style="text-align:center" id="segundo" >
+      <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarproy',5)"></i>
+  </div>
+
+  <div class="parrafoseditables" id="demo4" >
+      <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
+        Titulo:<p  class="titulo">Mi Portfolio personal</p>
+        Descripcion:<p class="fecha descripcion"> Creacion de un Portfolio personal, desarrollo del FrontEnd, BackEnd, Base de datos y sus conecciones a un servidor online</p>
+        Link:<p class=""> HTTPs://www.miport...com.ar</p>
+        <p class="fecha" >28/06/2022</p>
+        -<p class="fecha">15/01/2023</p>
+  </div>
+
+  <div  id="clonarproy" style="display:none" >
+      <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+      <button type="button" onclick="editar(this.nextElementSibling.id)"  class="bi bi-pencil rounded float-end botonera"  ></button>
+
+      <div id="inputproyecto" class="inputeditable">
+          <button onclick="guardar(this.parentNode.id,5)" type="button"   class="bi bi-clipboard-check rounded float-end botonera" ></button>
+          <input type="text" placeholder="Nombre/Titulo">
+          <input type="text" class="descexp" placeholder="Descripcion" >
+          <input  type="text" placeholder="Link">
+          <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
+          <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
+
+      </div>
+
+      <div id="pproyecto" class="parrafoseditables" style="display:none">
+            Titulo:<p class="titulo"></p>
+            Descripcion:<p class=" descripcion"></p>
+            Link: <p class="link"></p>
+            <p class="fecha"></p>
+            -<p class="fecha"></p>
+      </div>
+  </div>
+</div>
+

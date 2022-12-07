@@ -40,6 +40,8 @@ opacity: 1;}
  padding: 1px;
  margin: 5px;}
 
+ .bi{margin: 2px;}
+
 .divPresentacion{
  border-radius: 15px;
  max-width: 100%;
@@ -50,11 +52,12 @@ opacity: 1;}
  background: radial-gradient(#58b46780, #64faff7e);
  border: 2px solid  #d2b4de ;
  border-radius: 15px;
- max-width: 100%;
+
  word-wrap: break-word;
  overflow: auto;
  padding: 5px;
- margin: 10px}
+ margin-bottom: 10px;
+ margin-top: 10px}
 
 .botonera {
  color:rgb(76, 0, 255);

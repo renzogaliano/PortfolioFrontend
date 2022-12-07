@@ -1,0 +1,27 @@
+<div  class="acerca-de container-sm  redaccion " >
+  <h2  >Acerca de mi </h2>
+  <div style="text-align:center" id="segundo" >
+      <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonaracerca',1)"></i>
+  </div>
+
+  <div class="parrafoseditables" id="demo1" >
+      <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
+      <p class="par" >Soy un farmaceutico, que tuvo siempre un gran  gusto por la informatica, planillas excel, etc,
+       y que gracias a un programa nacional, se decidio a estudiar programacion</p>
+  </div>
+
+
+  <div class="" id="clonaracerca" style="display:none">
+     <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_acerca_de" ></button>
+     <button type="button" onclick="editar(this.nextElementSibling.id)" id="xxx"   class="bi bi-pencil rounded float-end botonera"  >  </button>
+
+     <div id="inputacerca"  class="inputeditable" >
+       <button onclick="guardar(this.parentNode.id,1)" type="button" class="bi bi-clipboard-check rounded float-end botonera" ></button>
+       <input type="text" class="descexp" placeholder="Descripcion" >
+     </div>
+
+     <div id="pacerca" class="parrafoseditables" style="display:none">
+      <p id="para"></p>
+     </div>
+  </div>
+  </div>
