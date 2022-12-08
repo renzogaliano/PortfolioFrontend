@@ -13,7 +13,7 @@ export class SkillComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       console.log(data);
-      this.miskill=data;
+      this.miskill=data.skill;
 
     });
   }

@@ -3,7 +3,7 @@
    <div class="col " >
     <div class="row" >
       <div class="col  " style= "max-width:250px;   " >
-          <img src="./assets/fotomia.jpg"  class="img-fluid rounded-circle imagenPerfil " id="fotoperfil"  alt="fotografia de Renzo"  >
+          <img [src]="miperfil.image"  class="img-fluid rounded-circle imagenPerfil " id="fotoperfil"  alt="fotografia de Renzo"  >
           <div class="editFotoPerfil" id="id_camera" >
            <label for="file-input"  > <i class="fa fa-camera" aria-hidden="true" onclick="cambiarfoto()" ></i></label>
            <input id="file-input" type="file" accept=".jpg,.jpeg, .gif, .png, .pdf"  onchange="previewFile()"  >
@@ -26,10 +26,10 @@
 
            <div class="parrafopresentacion" id="edicionoutput">
 
-                <p id="nombre">Renzo Galiano</p>
-                <p id="tituloinfo">Programador Full Stack Junior</p>
-                <p id="edad">35 años</p>
-                <p id="Prov"> Santa Fe, Argentina</p>
+                <p id="nombre">{{miperfil.name}}</p>
+                <p id="tituloinfo">{{miperfil.about}}</p>
+                <p id="edad">{{miperfil.age}}</p>
+                <p id="Prov"> {{miperfil.ubication}}</p>
 
                <div style="font-size: 20px;" class="iconsocial">
                    <a href="" id="facebook" target="_blank" style="color: black"><i  class="bi bi-facebook" ></i></a>

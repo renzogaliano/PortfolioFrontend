@@ -1,7 +1,7 @@
 {
   "name":"Renzo Galiano",
   "backImage":"",
-  "image":"",
+  "image":"/assets/fotomia.jpg",
   "age":"35 años",
   "company":{},
   "school":{},
@@ -50,10 +50,10 @@
   "skill2":"compañerismo",
   "skill3":"simpatia",
   "skill4":"colaboracion",
-  "skill1%":"10",
-  "skill2%":"25",
-  "skill3%":"50",
-  "skill4%":"75"}
+  "skill1perc":"10",
+  "skill2perc":"25",
+  "skill3perc":"50",
+  "skill4perc":"75"}
 ]
 
 
