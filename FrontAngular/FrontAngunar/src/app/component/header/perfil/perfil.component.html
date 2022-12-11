@@ -1,0 +1,47 @@
+<div class="container-sm" >
+  <div class="row "  >
+   <div class="col " >
+    <div class="row" >
+      <div class="col  " style= "max-width:250px;   " >
+          <img [src]="miperfil.image"  class="img-fluid rounded-circle imagenPerfil " id="fotoperfil"  alt="fotografia de Renzo"  >
+          <div class="editFotoPerfil" id="id_camera" >
+           <label for="file-input"  > <i class="fa fa-camera" aria-hidden="true" onclick="cambiarfoto()" ></i></label>
+           <input id="file-input" type="file" accept=".jpg,.jpeg, .gif, .png, .pdf"  onchange="previewFile()"  >
+          </div>
+      </div>
+      <div  class="col-sm  align-self-end divPresentacion" >
+        <p  class="presentacion" id="texto_presentacion">
+          <div >
+           <div id="edicioninput" style="display: none;">
+             <input id="id_nombre" type="text" placeholder="Nombre y Apellido">
+             <input id="id_tituloinfo" type="text" placeholder="Titulo">
+             <input id="id_edad" type="text" placeholder="Edad">
+             <input id="id_Prov" type="text" placeholder="Provincia, Pais">
+             <input id="id_face" type="text" placeholder="Username Facebook">
+             <input id="id_instagram" type="text" placeholder="Username Instagram">
+             <input id="id_twitter" type="text" placeholder="Username Twitter">
+             <input id="id_linkedin" type="text" placeholder="Username Linkedin">
+             <button type="button" onclick="guardarPresentacion()" class="bi bi-clipboard-check botonera ">  </button>
+           </div>
+
+           <div class="parrafopresentacion" id="edicionoutput">
+
+                <p id="nombre">{{miperfil.name}}</p>
+                <p id="tituloinfo">{{miperfil.about}}</p>
+                <p id="edad">{{miperfil.age}}</p>
+                <p id="Prov"> {{miperfil.ubication}}</p>
+
+               <div style="font-size: 20px;" class="iconsocial">
+                   <a href="" id="facebook" target="_blank" style="color: black"><i  class="bi bi-facebook" ></i></a>
+                   <a href="" id="instagram" target="_blank" style="color: black"><i  class="bi bi-instagram"></i></a>
+                   <a href="" id="twitter" target="_blank" style="color: black"><i class="bi bi-twitter"></i></a>
+                   <a href="" id="linkedin" target="_blank" style="color: black"><i  class="bi bi-linkedin" ></i></a>
+                   <button type="button" onclick="editarPresentacion()" class="bi bi-pencil botonera " style="transform: translate(100%, 0px);" ></button>
+               </div>
+           </div>
+          </div>
+       </div>
+    </div>
+   </div>
+  </div>
+ </div>

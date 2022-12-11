@@ -1,0 +1,41 @@
+<div class=" experiencia container-sm redaccion " id="a" >
+  <h2 >Experiencia</h2>
+
+  <div style="text-align:center" id="segundo" >
+      <i type="button" class="bi bi-plus-circle botonplus" onclick="clonar('clonarexp',5)"></i>
+  </div>
+
+  <div class="parrafoseditables " id="demo2" *ngFor="let experiencia of miexperiencia">
+      <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero"  ></button>
+
+      Titulo/Cargo:<p  class="titulo">{{experiencia.position}}</p>
+      Empresa:<br><p class="fecha descripcion"> {{experiencia.company}} </p>
+      Descripcion:<p class="descripcion">{{experiencia.descripcion}} </p>
+      <p class="fecha" >{{experiencia.start}}</p>
+      -<p class="fecha">{{experiencia.end}}</p><br>
+
+  </div>
+
+  <div class="" id="clonarexp"  style="display:none">
+      <button onclick="borrar(this.parentNode.id)" class="bi bi-trash rounded float-end basurero" id="borrar_educacion" ></button>
+      <button type="button" onclick="editar(this.nextElementSibling.id)" id="editar"   class="bi bi-pencil rounded float-end botonera"  ></button>
+
+      <div id="inputeditable2" class="inputeditable">
+          <button onclick="guardar(this.parentNode.id,5)" type="button"  id="vvv"  class="bi bi-clipboard-check rounded float-end botonera" ></button>
+          <input type="text" placeholder="Puesto" >
+          <input type="text"placeholder="Empresa" >
+          <input type="text"  class="descexp" placeholder="Descripcion"   >
+          <input type="text"  class="inputfecha" placeholder="dd/mm/aaaa">
+          <input type="text" class="inputfecha" placeholder="dd/mm/aaaa">
+      </div>
+
+      <div id="parrafosedit1" class="parrafoseditables" style="display:none">
+          Titulo/Cargo:<p id="tituloexp" class="titulo"></p>
+          Empresa:<p id="2"class="descripcion"></p>
+          Descripcion:<p id="4"class=""></p>
+          <p id="jj"class="fecha" ></p>-
+          <p id="3"class="fecha2 "></p>
+      </div>
+  </div>
+
+</div>

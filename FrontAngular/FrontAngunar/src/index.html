@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style4.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+ 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+   <title>Frontend</title>
+</head>
+
+<body  >
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<app-root></app-root>
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+
+ <!-------------------------------------------------------------------------------------------------------------------------------------------->
+ <script>datePickerdesde.max = new Date().toISOString().split("T")[0];</script>
+ <script>datePickerhasta.max = new Date().toISOString().split("T")[0];</script>
+
+</body >
+<script>
+
+function previewFile() {
+  const preview = document.querySelector('#fotoperfil');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
+  reader.addEventListener("load", function () {
+    // convierte la imagen a una cadena en base64
+    preview.src = reader.result;
+  }, false);
+  if (file) {reader.readAsDataURL(file); }
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------
+function editarPresentacion(){
+   document.getElementById("edicioninput").setAttribute("style","display:inline");
+   document.getElementById("edicionoutput").setAttribute("style","display:none")
+   }
+//---------------------------------------------------------------------------------------------------------------------------------
+function guardarPresentacion(){
+   document.getElementById("nombre").innerHTML=document.getElementById("id_nombre").value
+   document.getElementById("tituloinfo").innerHTML=document.getElementById("id_tituloinfo").value
+   document.getElementById("edad").innerHTML=document.getElementById("id_edad").value
+   document.getElementById("Prov").innerHTML=document.getElementById("id_Prov").value
+   document.getElementById("edicioninput").setAttribute("style","display:none");
+   document.getElementById("edicionoutput").setAttribute("style","display:inline")
+
+   document.getElementById("facebook").setAttribute("href","https://www.facebook.com/"+document.getElementById("id_face").value)
+}document.getElementById("instagram").setAttribute("href","https://www.instagram.com/"+document.getElementById("id_instagram").value)
+document.getElementById("twitter").setAttribute("href","https://www.twitter.com/"+document.getElementById("id_twitter").value)
+document.getElementById("linkedin").setAttribute("href","www.linkedin.com/in/"+document.getElementById("id_linkedin").value)
+//---------------------------------------------------------------------------------------------------------------------------------
+function editar(parametro){
+
+   let boton_editar= document.getElementById(parametro).parentNode.children[1]
+   boton_editar.setAttribute("style","display:none")
+   let boton_guardar= document.getElementById(parametro).children[0]
+   boton_guardar.setAttribute("style","display:inline")
+
+   let id_input=document.getElementById(parametro)
+   let id_inpuat=document.getElementById(parametro).id
+     let id_parr= document.getElementById(id_inpuat).nextElementSibling
+   id_input.setAttribute("style", "display:inline")
+   id_parr.setAttribute("style", "display:none")
+
+}
+//---------------------------------------------------------------------------------------------------------------------------------
+var n = 0
+function clonar(parametro, numero){
+   n++
+   let botonEditar=document.getElementById(parametro).children[1]
+  botonEditar.style.display="none"
+
+   let inputs= document.getElementById(parametro).children[2]
+   let parrafos=document.getElementById(parametro).children[3]
+
+var clone = document.getElementById(parametro).cloneNode(true)
+   var posicion = document.getElementById(parametro);
+   var id_padre = document.getElementById(parametro).parentNode;
+   id_padre.insertBefore(clone, posicion);
+
+   posicion.setAttribute("id","clonado"+n)
+   inputs.setAttribute("id","inputs"+n)
+   parrafos.setAttribute("id","parrafos"+n)
+
+   for(i=0;i<numero;i++){parrafos.children[i].setAttribute("id","par"+i+n)}
+
+   posicion.setAttribute("style","display:inline")
+}
+//---------------------------------------------------------------------------------------------------------------------------------
+function borrar(parametro){
+
+     var id_recibido = document.getElementById(parametro).remove()
+   }
+//---------------------------------------------------------------------------------------------------------------------------------
+
+function guardar(parametro,cantidad){
+
+  let parrafoss=document.getElementById(parametro).nextElementSibling
+  let inputs=document.getElementById(parametro).nextElementSibling.id
+  if(document.getElementById(parametro).children[1].value=="")
+{alert("Ingrese sus datos");}
+else{
+parrafoss.setAttribute("style", "display:inline")
+   for(i=1,u=0;i<=cantidad;i++,u++){
+         document.getElementById(inputs).children[u].innerHTML= document.getElementById(parametro).children[i].value
+       }
+var idlocal=document.getElementById(parametro)
+parrafoss.setAttribute("style", "display:hide")
+idlocal.setAttribute("style", "display:none")
+let botonEditar=document.getElementById(parametro).parentNode.children[1]
+  botonEditar.setAttribute("style","display:inline")
+  let botonguardar=document.getElementById(parametro).children[0]
+  botonguardar.setAttribute("style","display:none")}
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------
+function skill(){
+   document.getElementById("input_skill").setAttribute("style","display:none")
+   document.getElementById("output_skill").setAttribute("style","display:inline")
+      for(i=1;i<=4;i++){
+   var x = "Skill"+i
+   var y = "id_skill"+i
+   var z = "id_pskill"+i
+   var t = "skill"+i
+   var r = "width:"+document.getElementById(x).value+"%"
+   document.getElementById(y).setAttribute("style",r)
+   document.getElementById(z).innerText=document.getElementById(t).value
+   document.getElementById(t).value=""
+   document.getElementById(x).value=""}
+}
+//---------------------------------------------------------------------------------------------------------------------------------
+function habilitarskill(){
+   document.getElementById("input_skill").setAttribute("style", "display:block")
+}
+//---------------------------------------------------------------------------------------------------------------------------------
+function borrarskill(){
+   for(i=1;i<=4;i++){
+   var x = "Skill"+i
+   var y = "id_skill"+i
+   var z = "id_pskill"+i
+   var t = "skill"+i
+   document.getElementById(t).value=""
+   document.getElementById(x).value=""
+   document.getElementById(z).innerText=""
+   document.getElementById(y).setAttribute("style","width:0%");}
+   document.getElementById("input_skill").setAttribute("style","display:block")
+   document.getElementById("output_skill").setAttribute("style","display:none")
+}
+//---------------------------------------------------------------------------------------------------------------------------------
+   function login(){
+      document.getElementById("formularioEmail").style.display =""
+}
+      //---------------------------------------------------------------------------------------------------------------------------------
+function enviar(){
+   document.getElementById("botonLogout").style.display ="";
+   document.getElementById("botonLogin").style.display ="none"
+   document.getElementById("formularioEmail").style.display ="none"
+}
+    //---------------------------------------------------------------------------------------------------------------------------------
+function logout(){
+   document.getElementById("formularioEmail").style.display ==""
+   document.getElementById("botonLogout").style.display ="none";
+   document.getElementById("botonLogin").style.display =""
+}
+
+
+
+</script>
+
+</html>
