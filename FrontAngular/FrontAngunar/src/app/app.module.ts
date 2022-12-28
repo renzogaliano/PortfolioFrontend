@@ -13,6 +13,9 @@ import { LoginoutylogosComponent } from './component/header/loginoutylogos/login
 import { EmailComponent } from './component/header/email/email.component';
 import { PerfilComponent } from './component/header/perfil/perfil.component';
 import {HttpClientModule} from '@angular/common/http';
+import { IniciarSesionComponent } from './component/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './component/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import {HttpClientModule} from '@angular/common/http';
     LoginoutylogosComponent,
     EmailComponent,
     PerfilComponent,
+    IniciarSesionComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
